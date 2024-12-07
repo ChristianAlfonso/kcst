@@ -58,17 +58,94 @@ $conn->close();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+<style>
+.navbar-toggler {
+    background-color: #37371a; /* Bootstrap's dark color */
+}
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+@media (min-width: 800px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    #header {
+        display: none !important    ;
+    }
+}
+
+</style>
 <body>
 
     <div class="admin-post d-flex">
         <div id="header" class="d-flex">
-        
+                        <div class="sidebar shadow-sm p-5" style="min-height: 100vh; background-color: #2a2a16;">
+                            <div class="sidebar-brand d-flex justify-content-start align-items-center">
+                                <img src="./asset/img/kcst1.png" alt="" style="height: 50px;">
+                                <h1 class="text-light">KCST</h1>
+                            </div>
+                            <div class="sidebar-nav mt-3">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="admin-announcement.php" class="nav-link text-light">Post Announcement</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="admin-event.php" class="nav-link text-light">Post Event</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="delete-announcement.php" class="nav-link text-light">Delete Announcement</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="delete-event.php" class="nav-link text-light">Delete Event</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link text-light">Logout</a>
+                                    </li>
+                                </ul>
+                        </div>
+                </div>
+</div>
+        <!--offcanvas for navbar-->
+        <div class="offcanvas offcanvas-end" id="responsiveSidebar">
+            <div class="offcanvas-header">
+                <h2>Menu</h2>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="sidebar">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="admin.announcement.php" class="nav-link">Post Announcement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-event.php" class="nav-link">Post Event</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="delete-announcement.php" class="nav-link">Delete Announcement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="delete-event.php" class="nav-link">Delete Event</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="main border flex-grow-1 p-5">
-            <div class="main-header">
+            <div class="main-header d-flex justify-content-between align-items-center">
                 <h2 style="color: #808131">Post Announcement</h2>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#responsiveSidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
             <div class="main-body mt-4">
                 <form action="admin-announcement.php" method="post">
@@ -85,35 +162,7 @@ $conn->close();
                     </div>
                 </form>
             </div>
-            <div class="main-posted">
-                <h2 style="color: #808131;" class="mb-3">Latest Announcement</h2>
-                <div class="container">
-                <?php
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
-                $result = $conn->query("SELECT title, message, created_at FROM announcement ORDER BY created_at DESC");
-
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<div class='card mb-3'>";
-                        echo "<div class='card-body'>";
-                        echo "<h2 class='card-title'>" . htmlspecialchars($row['title']) . "</h2>";
-                        echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['message'])) . "</p>";
-                        echo "<p class='card-text'><small class='text-muted'>Posted on " . $row['created_at'] . "</small></p>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                } else {
-                    echo "<p>No announcements available.</p>";
-                }
-
-                $conn->close();
-                ?>
-                </div>
-            </div>
+            
         </div>
     </div>
     
