@@ -56,7 +56,7 @@ CREATE TABLE `event` (
 --
 -- Indexes for table `anouncement`
 --
-ALTER TABLE `anouncement`
+ALTER TABLE `announcement`
   ADD PRIMARY KEY (`delete_id`);
 
 --
@@ -72,7 +72,7 @@ ALTER TABLE `event`
 --
 -- AUTO_INCREMENT for table `anouncement`
 --
-ALTER TABLE `anouncement`
+ALTER TABLE `announcement`
   MODIFY `delete_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

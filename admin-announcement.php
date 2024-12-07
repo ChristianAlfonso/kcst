@@ -147,7 +147,7 @@ $conn->close();
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="main-body mt-4">
+            <div class="main-body mt-4 shadow p-4">
                 <form action="admin-announcement.php" method="post">
                     <div class="form-group">
                         <label for="title">Title:</label>

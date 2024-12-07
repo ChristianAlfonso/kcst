@@ -3,62 +3,51 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "aim";
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_event_id'])) {
-    $event_id = intval($_POST['delete_event_id']);
+$alertScript = '';
 
-    $query = "SELECT image FROM event WHERE id = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("i", $event_id);
-    $stmt->execute();
-    $stmt->bind_result($image);
-    $stmt->fetch();
-    $stmt->close();
+if (isset($_GET['delete_id'])) {
+    $delete_id = (int)$_GET['delete_id'];
 
-    $delete_query = "DELETE FROM event WHERE id = ?";
-    $delete_stmt = $conn->prepare($delete_query);
-    $delete_stmt->bind_param("i", $event_id);
+    $stmt = $conn->prepare("DELETE FROM announcement WHERE delete_id = ?");
+    $stmt->bind_param("i", $delete_id);
 
-    if ($delete_stmt->execute()) {
-        if ($image && file_exists("uploads/" . $image)) {
-            unlink("uploads/" . $image);
-        }
-        echo "<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Event deleted successfully!',
-                    showConfirmButton: true,
-                    confirmButtonText: 'OK',
-                    timer: 1500
-                });
+    if ($stmt->execute()) {
+        $alertScript = "<script>
+            Swal.fire({
+                title: 'Success!',
+                text: 'Announcement deleted successfully!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'delete-announcement.php';
+                }
             });
         </script>";
     } else {
-        echo "<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error deleting event',
-                    text: '" . $delete_stmt->error . "',
-                    showConfirmButton: true,
-                    confirmButtonText: 'OK'
-                });
+        $alertScript = "<script>
+            Swal.fire({
+                title: 'Error!',
+                text: 'Error deleting announcement.',
+                icon: 'error',
+                confirmButtonText: 'OK'
             });
         </script>";
     }
 
-    $delete_stmt->close();
+    $stmt->close();
 }
 
 
-$query = "SELECT * FROM event ORDER BY created_at DESC";
-$result = $conn->query($query);
+$sql = "SELECT * FROM announcement ORDER BY created_at DESC";
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -158,44 +147,59 @@ $result = $conn->query($query);
 
         <div class="main border flex-grow-1 p-5">
             <div class="main-header d-flex justify-content-between align-items-center">
-                <h2 style="color: #808131">Current Event</h2>
+                <h2 style="color: #808131">Current Announcement</h2>
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#responsiveSidebar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
             <div class="main-body mt-4">
-                <div class="container p-4 shadow d-flex justify-content-start align-items-center mt-4" style="gap: 1rem; flex-wrap: wrap;">
-                    <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<div class='card shadow-sm'>";
-                            if (!empty($row['image'])) {
-                                echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' class='card-img-top' style='width: 100%; height: auto; max-width: 300px;' alt='Event Image'>";
-                            }
-                            echo "<div class='card-body'>";
-                            echo "<h5 class='card-title'>" . htmlspecialchars($row['title']) . "</h5>";
-                            echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['description'])) . "</p>";
-                            echo "<p class='card-text'><small class='text-muted'>Scheduled on: " . $row['event_date'] . "</small></p>";
-                            echo "<form method='POST' action=''>
-                                    <input type='hidden' name='delete_event_id' value='" . $row['id'] . "'>
-                                    <div class='d-flex justify-content-end'>
-                                        <button type='submit' class='btn btn-danger'>Delete Event</button>
-                                    </div>
-                                </form>";
-                            echo "</div>";
-                            echo "</div>";
-                        }
-                    } else {
-                        echo "<p>No events available.</p>";
-                    }
-                    ?>
-                </div>
+            <div class="container  p-4 shadow d-flex justify-content-start align-items-center mt-4" style="gap: 1rem; flex-wrap: wrap;">
+    
+                <?php if ($result->num_rows > 0): ?>
+                    <?php while ($row = $result->fetch_assoc()): ?>
+                        <div class="announcement shadow-sm p-5">
+                            <h3><?= htmlspecialchars($row['title']) ?></h3>
+                            <p><?= nl2br(htmlspecialchars($row['message'])) ?></p>
+                            <small>Posted on: <?= $row['created_at'] ?></small>
+                            <br>
+                            <div class="d-flex justify-content-end">
+                                <a href="?delete_id=<?= $row['delete_id'] ?>" class="btn btn-danger mt-3">Delete</a>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <p>No announcements yet.</p>
+                <?php endif; ?>
+            </div>
+
             </div>
         </div>
     </div>
     
+    <?php if ($alertScript) echo $alertScript; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.querySelectorAll('.btn-danger').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const url = this.href;
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'You won\'t be able to revert this!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

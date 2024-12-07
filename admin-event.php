@@ -213,7 +213,7 @@ $conn->close();
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="main-body mt-4">
+            <div class="main-body shadow p-4 mt-4">
                 <form action="" method="POST" enctype="multipart/form-data">
 
                     <div class="form-group mt-3">
