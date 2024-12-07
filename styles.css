@@ -108,37 +108,37 @@
 }
 
 .program .program-body .box:nth-child(1) {
-    background: url(./asset/img/blur-dark-bg.png) no-repeat center / cover;
+    background: url(./asset/img/basic-educ.jpg) no-repeat center / cover;
     color: white;
 }
 
 .program .program-body .box:nth-child(2) {
-    background: url(./asset/img/blur-dark-bg.png) no-repeat center / cover;
+    background: url(./asset/img/senior-high.jpg) no-repeat center / cover;
     color: white;
 }
 
 .program .program-body .box:nth-child(3) {
-    background: url(./asset/img/blur-dark-bg.png) no-repeat center / cover;
+    background: url(./asset/img/bsit.jpg) no-repeat center / cover;
     color: white;
 }
 
 .program .program-body .box:nth-child(4) {
-    background: url(./asset/img/blur-dark-bg.png) no-repeat center / cover;
+    background: url(./asset/img/crim.jpg) no-repeat center / cover;
     color: white;
 }
 
 .program .program-body .box:nth-child(5) {
-    background: url(./asset/img/blur-dark-bg.png) no-repeat center / cover;
+    background: url(./asset/img/bsce.jpg) no-repeat center / cover;
     color: white;
 }
 
 .program .program-body .box:nth-child(6) {
-    background: url(./asset/img/blur-dark-bg.png) no-repeat center / cover;
+    background: url(./asset/img/bshm.jpg) no-repeat center / cover;
     color: white;
 }
 
 .program .program-body .box:nth-child(7) {
-    background: url(./asset/img/blur-dark-bg.png) no-repeat center / cover;
+    background: url(./asset/img/educ.jpg) no-repeat center / cover;
     color: white;
 }
 

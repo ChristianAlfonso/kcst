@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-head {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .chat-head img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .chat-container {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 400px;
+            max-width: 90%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .chat-content {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .chat-bubble {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+
+        .bot-bubble {
+            background: #e0e0e0;
+            align-self: flex-start;
+        }
+
+        .user-bubble {
+            background: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .choices {
+            margin-top: 10px;
+        }
+
+        .choices button {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .choices button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-head" onclick="toggleChat()">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat Icon">
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">FAQS</div>
+        <div class="chat-content" id="chatContent"></div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "Hi, How can I assist you today?",
+                choices: [
+                    { text: "What are the school hours?", response: "Our school is open from 8:00 AM to 6:00 PM, Monday to Friday." },
+                    { text: "Where is the school located?", response: "P4 Bulanao, Tabuk City, Kalinga,or you can check our location in the map to our website." },
+                    { text: "How can I contact the administration?", response: "You can reach our administration office at 0912345678 or email adminkcst@gmail.com." }
+                ]
+            },
+            {
+                question: "Is there anything else you want to know?",
+                choices: [
+                    { text:  "What are the school hours?", response: "Our school is open from 8:00 AM to 6:00 PM, Monday to Friday." },
+                    { text: "Where is the school located?", response: "P4 Bulanao, Tabuk City, Kalinga,or you can check our location in the map to our website." },
+                    {text: "How can I contact the administration?", response: "You can reach our administration office at 0912345678 or email adminkcst@gmail.com." }
+                ]
+            },
+            {
+                question: "Would you like to know more about our facilities?",
+                choices: [
+                    { text:  "What are the school hours?", response: "Our school is open from 8:00 AM to 6:00 PM, Monday to Friday." },
+                    { text: "Where is the school located?", response: "P4 Bulanao, Tabuk City, Kalinga,or you can check our location in the map to our website." },
+                    { text: "How can I contact the administration?", response: "You can reach our administration office at 0912345678 or email adminkcst@gmail.com." }
+                ]
+            }
+        ];
+
+        const chatContent = document.getElementById('chatContent');
+        const chatContainer = document.getElementById('chatContainer');
+
+        function toggleChat() {
+            if (chatContainer.style.display === "none" || chatContainer.style.display === "") {
+                chatContainer.style.display = "flex";
+            } else {
+                chatContainer.style.display = "none";
+            }
+        }
+
+        function addChatBubble(text, isUser = false) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('chat-bubble');
+            bubble.classList.add(isUser ? 'user-bubble' : 'bot-bubble');
+            bubble.textContent = text;
+            chatContent.appendChild(bubble);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        function loadQuestion(index) {
+            if (index >= questions.length) {
+                addChatBubble("Thank you for chatting! Feel free to ask more questions.");
+                setTimeout(() => {
+                    chatContent.innerHTML = ""; 
+                    loadQuestion(0); 
+                }, 9000);
+                return;
+            }
+
+            const currentQuestion = questions[index];
+            addChatBubble(currentQuestion.question);
+
+            const choicesBlock = document.createElement('div');
+            choicesBlock.classList.add('choices');
+
+            currentQuestion.choices.forEach(choice => {
+                const button = document.createElement('button');
+                button.textContent = choice.text;
+                button.onclick = () => {
+                    addChatBubble(choice.text, true); 
+                    addChatBubble(choice.response); 
+                    choicesBlock.remove();
+                    loadQuestion(index + 1);
+                };
+                choicesBlock.appendChild(button);
+            });
+
+            chatContent.appendChild(choicesBlock);
+        }
+
+        loadQuestion(0);
+    </script>
+</body>
+</html>
