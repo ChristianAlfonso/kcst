@@ -1,16 +1,32 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "aim"; 
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql_events = "SELECT * FROM event WHERE image IS NOT NULL AND image != '' ORDER BY created_at DESC";
+$result_events = $conn->query($sql_events);
+
+$sql_announcements = "SELECT * FROM announcement ORDER BY created_at DESC";
+$result_announcements = $conn->query($sql_announcements);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalinga Colleges of Science and Technology</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        .navbar {
-            transition: background-color 0.5s ease;
-        }
-        
+    <style>  
         .mapa iframe {
             width: 70%;
         }
@@ -108,6 +124,7 @@
     </style>
 </head>
 <body>
+
     <div class="landing">
        
         <div class="navbar navbar-expand-lg px-5 navbar-dark fixed-top d-flex justify-content-between align-items-center">
@@ -134,11 +151,9 @@
                         <a href="#about" class="nav-link">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">EVENTS</a>
+                        <a href="#updates" class="nav-link">CAMPUS UPDATES</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">ANNOUNCEMENT</a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">CONTACT</a>
                     </li>
@@ -174,11 +189,9 @@
                             <a href="#about" class="nav-link">ABOUT</a>
                         </li>   
                         <li class="nav-item">
-                            <a href="" class="nav-link">EVENTS</a>
+                            <a href="#updates" class="nav-link">CAMPUS UPDATES</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">ANNOUNCEMENT</a>
-                        </li>
+                    
                         <li class="nav-item">
                             <a href="#contact" class="nav-link">CONTACT</a>
                         </li>
@@ -190,13 +203,45 @@
             </div>
 
         </div>
-
         
-        <div class="main-content d-flex justify-content-center align-items-center flex-column text-white text-center" id="home">
+        <!--Main Content-->
+        <div class="main-content p-3 d-flex justify-content-center align-items-center flex-column text-white text-center" id="home">
             <h2>Welcome to Kalinga Colleges of Science and Technology.</h2>
             <p>Home of the Topnotchers!</p>
         </div>
 
+          <!--Values-->
+
+        <div class="section value d-flex justify-content-center align-items-center p-5 bg-light" id="demo">
+            <div class="box p-5"></div>
+            <div class="box p-3 ">
+                <div class="box-header text-center">
+                    <h2>Our Values</h2>
+                </div>
+                <div class="box-body">
+                    <div class="group p-2 mt-3">
+                        <h4>MISSION:</h4>
+                        <p>Our mission is to provide exceptional services, foster innovation, and nurture a community that values growth and collaboration.
+                        </p>
+                    </div>
+                    <div class="group p-2 mt-3">
+                        <h4>VISION:</h4>
+                        <p>Our vision is to inspire and empower individuals to achieve their full potential and create a better future for all.</p>
+                    </div>
+                    <div class="group p-2 mt-3">
+                        <h4>HYMN:</h4>
+                        <p>Here's to the land we hold so dear, With hearts united, strong and clear. We strive for greatness, hand in hand, To build a brighter, promised land.
+
+                            Together we sing, together we rise, Guided by dreams under open skies. In unity, we’ll always stand, For our home, our cherished land.
+                            
+                            Forever loyal, forever true, We pledge our hearts, our spirits too. Through trials, triumphs, we will see, A legacy of harmony.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
         <div class="section about d-flex justify-content-center align-items-center p-5 flex-column">
             <div class="about-header">
                 <h2>Why Study at KCST?</h2>
@@ -229,44 +274,60 @@
             </div>
         </div>
 
+      
+        <!-- Carousel -->
 
-        <div class="section value d-flex justify-content-center align-items-center p-5" id="demo">
-            <div class="box p-5"></div>
-            <div class="box p-3 bg-dark text-light">
-                <div class="box-header text-center">
-                    <h2>Our Values</h2>
-                </div>
-                <div class="box-body">
-                    <div class="group p-2 mt-3">
-                        <h4><mark>MISSION:</mark></h4>
-                        <i>Our mission is to provide exceptional services, foster innovation, and nurture a community that values growth and collaboration.
-                        </i>
-                    </div>
-                    <div class="group p-2 mt-3">
-                        <h4><mark>VISION:</mark></h4>
-                        <i>Our vision is to inspire and empower individuals to achieve their full potential and create a better future for all.</i>
-                    </div>
-                    <div class="group p-2 mt-3">
-                        <h4><mark>HYMN:</mark></h4>
-                        <i>Here's to the land we hold so dear, With hearts united, strong and clear. We strive for greatness, hand in hand, To build a brighter, promised land.
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
 
-                            Together we sing, together we rise, Guided by dreams under open skies. In unity, we’ll always stand, For our home, our cherished land.
-                            
-                            Forever loyal, forever true, We pledge our hearts, our spirits too. Through trials, triumphs, we will see, A legacy of harmony.
-                        </i>
+                
+
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
                     </div>
-                </div>
-            </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./asset/img/display1.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
+                            <div class="carousel-caption">
+                                <h3>Open Grounds</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">            
+                            <img src="./asset/img/display2.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
+                            <div class="carousel-caption">
+                                <h3>Computer Laboratory</h3>
+                            </div> 
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./asset/img/display4.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
+                            <div class="carousel-caption">
+                                <h3>Admin Office</h3>
+                            </div>  
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    </button>
         </div>
 
-        <!--Programs-->
 
-        <div class="section program p-5" id="about">
+        <!--Programs-->
+        <div class="section program p-5 bg-light" id="about">
             <div class="program-header text-center">
                 <h2>Programs</h2>
             </div>
 
-        <div class="program-body d-flex justify-content-center align-items-center w-100 mt-5">
+            <div class="program-body d-flex justify-content-center align-items-center w-100 mt-5">
                 <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
                     <div class="box-header h3">Basic Education</div>
                     <div class="box-content">BED caters to an educational system that is meaningful and anchored on strength, sustainability, progressiveness, and people.</div>
@@ -302,56 +363,70 @@
             
             
                 
-        </div>
-        </div>
-
-        <!-- Carousel -->
-
-        <div id="carouselExample" class="carousel slide mt-5" data-bs-ride="carousel">
-
-            
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
             </div>
-            
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./asset/img/display1.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
-                    <div class="carousel-caption">
-                        <h3>Open Grounds</h3>
+        </div>
+
+        <!--updates-->
+        <div class="section updates p-5" id="updates">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header h2">
+                        Events
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        if ($result_events->num_rows > 0) {
+                            while ($row = $result_events->fetch_assoc()) {
+                                echo "<div class='card mb-3'>";
+                                if (!empty($row['image'])) {
+                                    echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' class='card-img-top' alt='Event Image'>";
+                                }
+                                echo "<div class='card-body'>";
+                                echo "<h5 class='card-title'>" . htmlspecialchars($row['title']) . "</h5>";
+                                echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['description'])) . "</p>";
+                                echo "<p class='card-text'><small class='text-muted'>Scheduled on " . $row['event_date'] . "</small></p>";
+                                echo "</div></div>";
+                            }
+                        } else {
+                            echo "<p>No events available.</p>";
+                        }
+                        ?>
                     </div>
                 </div>
-                <div class="carousel-item">            
-                    <img src="./asset/img/display2.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
-                    <div class="carousel-caption">
-                        <h3>Computer Laboratory</h3>
-                    </div> 
-                </div>
-                <div class="carousel-item">
-                    <img src="./asset/img/display4.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
-                    <div class="carousel-caption">
-                        <h3>Admin Office</h3>
-                    </div>  
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header h2">
+                        Announcements
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        if ($result_announcements->num_rows > 0) {
+                            while ($row = $result_announcements->fetch_assoc()) {
+                                echo "<div class='card mb-3'>";
+                                echo "<div class='card-body'>";
+                                echo "<h5 class='card-title'>" . htmlspecialchars($row['title']) . "</h5>";
+                                echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['message'])) . "</p>";
+                                echo "<p class='card-text'><small class='text-muted'>Posted on " . $row['created_at'] . "</small></p>";
+                                echo "</div></div>";
+                            }
+                        } else {
+                            echo "<p>No announcements available.</p>";
+                        }
+
+                        $conn->close();
+                        ?>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
-
+    </div>
+</div>
 
         <!--Contact-->
-        <div class="section contact p-5" id="contact">
+        <div class="section contact p-5 bg-light" id="contact">
                 
             <div class="contact-header text-center">
                 <h2>Contact Us</h2>
@@ -397,9 +472,17 @@
                 navbar.classList.remove('bg-dark');
             }
         });
+
+        document.querySelectorAll('.offcanvas a.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var offcanvasElement = document.querySelector('#navbar-offcanvas');
+                var bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+                bsOffcanvas.hide();
+            });
+        });
     </script>
-    <script src="./faqs.js"></script>
+    <script src="faqs.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./intersection.js"></script>
+    <script src="intersection.js"></script>
 </body>
 </html>
