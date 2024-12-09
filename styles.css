@@ -7,8 +7,6 @@
     font-family: Lexend;
 }
 
-
-
 /*Login Page*/
 .label-group {
     font-size: 0.8rem;
@@ -31,7 +29,6 @@
     background-color: #272715 !important;
 }
 
-
 /*Landing Page*/
 .navbar {
     transition: background-color 0.5s ease;
@@ -45,36 +42,28 @@
     width: 30px;
 }
 
-
 .main-content {
     position: relative;
     background: url(./asset/img/blur-bg.png) no-repeat center / cover fixed;
     height: 80vh;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
-
 
 .about .about-body {
     gap: 2rem;
     flex-wrap: wrap;
 }
 
-
 .about .about-body .box {
     width: 400px;
     height: 300px;
 }
 
-.about .about-body .box img{
+.about .about-body .box img {
     aspect-ratio: 1/1;
     width: 50px;
 }
 
-
-.value .box{
+.value .box {
     min-height: 60vh;
     flex: 1;
 }
@@ -83,13 +72,9 @@
     background: url(./asset/img/kcst-hero.png) no-repeat center / cover;
 }
 
-
-
-
 .program .program-body {
     gap: 1rem;
     flex-wrap: wrap;
-    
 }
 
 .program .program-body .box {
@@ -132,12 +117,7 @@
     color: white;
 }
 
-
-
 @media (max-width: 1200px) {
-
-    
-
     .value .box:nth-child(1) {
         display: none;
     }
@@ -145,12 +125,10 @@
     .value .box:nth-child(2) {
         padding: 20px !important;
     }
-    
+
     .mapa iframe {
         width: 80% !important;
     }
-
-    
 }
 
 @media (max-width: 990px) {
@@ -167,26 +145,27 @@
     }
 }
 
-
 @media (max-width: 500px) {
     .mapa iframe {
         width: 100% !important;
     }
 }
 
-.main-content, .section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-
 .updates .box {
     flex: 1;
 }
+
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+  }
