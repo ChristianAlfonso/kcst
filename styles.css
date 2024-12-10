@@ -7,6 +7,10 @@
     font-family: Lexend;
 }
 
+.navbar {
+    padding: 2%;
+}
+
 /*Login Page*/
 .label-group {
     font-size: 0.8rem;
@@ -68,9 +72,20 @@
     flex: 1;
 }
 
+
 .value .box:nth-child(1) {
     background: url(./asset/img/kcst-hero.png) no-repeat center / cover;
 }
+
+.program {
+    transition: all 0.6 ease;
+}
+
+
+.program .program-body:hover > :not(:hover){
+    filter:brightness(0.3);
+    opacity: 10;
+} 
 
 .program .program-body {
     gap: 1rem;
@@ -79,7 +94,7 @@
 
 .program .program-body .box {
     width: 400px;
-    min-height: 300px;
+    min-height: 400px;
 }
 
 .program .program-body .box:nth-child(1) {
@@ -149,7 +164,13 @@
     .mapa iframe {
         width: 100% !important;
     }
+
+    
+
 }
+
+.updates {
+    background: url(./asset/img/announcement.png) no-repeat bottom left / clamp(5rem, 15vw, 20rem);}
 
 .updates .box {
     flex: 1;

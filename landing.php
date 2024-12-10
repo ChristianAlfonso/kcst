@@ -121,13 +121,24 @@ $result_announcements = $conn->query($sql_announcements);
         .choices button:hover {
             background: #0056b3;
         }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
 
     <div class="landing">
-       
-        <div class="navbar navbar-expand-lg px-5 navbar-dark fixed-top d-flex justify-content-between align-items-center">
+        <!--Navbar-->
+        <div class="navbar navbar-expand-lg navbar-dark fixed-top d-flex justify-content-between align-items-center">
 
             <div class="navbar-brand d-flex justify-content-center align-items-center">
                 <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
@@ -145,10 +156,13 @@ $result_announcements = $conn->query($sql_announcements);
                     </li>
                 
                     <li class="nav-item">
-                        <a href="#demo" class="nav-link">OUR VALUES</a>
+                        <a href="#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#programs" class="nav-link">PROGRAMS</a>
                     </li>
                     <li class="nav-item">
                         <a href="#updates" class="nav-link">CAMPUS UPDATES</a>
@@ -182,12 +196,16 @@ $result_announcements = $conn->query($sql_announcements);
                         </li>
                     
                         <li class="nav-item">
-                            <a href="#demo" class="nav-link">OUR VALUES</a>
+                            <a href="#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
                         </li>
 
                         <li class="nav-item">
                             <a href="#about" class="nav-link">ABOUT</a>
                         </li>   
+
+                        <li class="nav-item">
+                            <a href="#programs" class="nav-link">PROGRAMS</a>
+                        </li>
                         <li class="nav-item">
                             <a href="#updates" class="nav-link">CAMPUS UPDATES</a>
                         </li>
@@ -210,13 +228,12 @@ $result_announcements = $conn->query($sql_announcements);
             <p>Home of the Topnotchers!</p>
         </div>
 
-          <!--Values-->
-
+        <!--Values-->
         <div class="section value d-flex justify-content-center align-items-center p-5 bg-light" id="demo">
             <div class="box p-5"></div>
             <div class="box p-3 ">
                 <div class="box-header text-center">
-                    <h2>Our Values</h2>
+                    <h2>Institutional Identity</h2>
                 </div>
                 <div class="box-body">
                     <div class="group p-2 mt-3">
@@ -241,7 +258,7 @@ $result_announcements = $conn->query($sql_announcements);
             </div>
         </div>
 
-        
+        <!--Why-->
         <div class="section about d-flex justify-content-center align-items-center p-5 flex-column">
             <div class="about-header">
                 <h2>Why Study at KCST?</h2>
@@ -274,9 +291,7 @@ $result_announcements = $conn->query($sql_announcements);
             </div>
         </div>
 
-      
         <!-- Carousel -->
-
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
 
                 
@@ -320,44 +335,76 @@ $result_announcements = $conn->query($sql_announcements);
                     </button>
         </div>
 
+        <!--About-->
+        <div class="section about-us vh-100 d-flex justify-content-center align-items-center p-5 flex-column" id="about">
+
+         </div>
 
         <!--Programs-->
-        <div class="section program p-5 bg-light" id="about">
+        <div class="section program p-5 bg-light" id="programs">
             <div class="program-header text-center">
                 <h2>Programs</h2>
             </div>
 
             <div class="program-body d-flex justify-content-center align-items-center w-100 mt-5">
-                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
+
+                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column">
                     <div class="box-header h3">Basic Education</div>
-                    <div class="box-content">BED caters to an educational system that is meaningful and anchored on strength, sustainability, progressiveness, and people.</div>
+                    <div class="box-content">Bachelor of Science in Education is an undergraduate degree design for student who aspire to become educators. it provides theoretical knowledge, practical skill, and training necessary to teach in schools...</div>
+                    <div class="box-modal mt-3">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#basic">Requirements</button>
+                    </div>
                 </div>
-                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
-                    <div class="box-header h3">Senior Highschool</div>
+
+                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column">
+                    <div class="box-header h3">Junior & Senior Highschool</div>
                     <div class="box-content">
-                        The KCST Senior High School (SHS) envisions to “holistically developed learners with 21st century skills”.</div>
+                    Bachelor of Science in Education is an undergraduate degree design for student who aspire to become educators. it provides theoretical knowledge, practical skill, and training necessary to teach in schools..
+                    </div>
+                    <div class="box-modal mt-3">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#hs">Requirements</button>
+                    </div>
                 </div>
-                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
+
+                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column">
                     <div class="box-header h3">Bs Information And Technology</div>
-                    <div class="box-content">BED caters to an educational system that is meaningful and anchored on strength, sustainability, progressiveness, and people.</div>
+                    <div class="box-content">This program equips students with the skills needed for the fast-paced world of Information Technology. You will gain a strong foundation in programming, networking, and system administration, with plenty of opportunities for hands-on learning and real-world experience.</div>
+                    <div class="box-modal mt-3">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#it">Requirements</button>
+                    </div>
                 </div>
-                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
+
+                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column">
                     <div class="box-header h3">Bs Criminology</div>
-                    <div class="box-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse in qui quo, blanditiis dolorum, eveniet praesentium alias dolor nesciunt cupiditate sapiente ex eaque ab odio excepturi neque molestiae placeat!</div>
+                    <div class="box-content">Bachelor of Science in Education is an undergraduate degree design for student who aspire to become educators. it provides theoretical knowledge, practical skill, and training necessary to teach in schools..</div>
+                    <div class="box-modal mt-3">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#crim">Requirements</button>
+                    </div>
                 </div>
-                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
+
+                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column">
                     <div class="box-header h3">Bs Computer Engineering</div>
-                    <div class="box-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse in qui quo, blanditiis dolorum, eveniet praesentium alias dolor nesciunt cupiditate sapiente ex eaque ab odio excepturi neque molestiae placeat!</div>
+                    <div class="box-content">Bachelor of Science in Education is an undergraduate degree design for student who aspire to become educators. it provides theoretical knowledge, practical skill, and training necessary to teach in schools..</div>
+                    <div class="box-modal mt-3">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#comp">Requirements</button>
+                    </div>
                 </div>
-                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
+                
+                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column">
                     <div class="box-header h3">Bs Hospitality
                     </div>
-                    <div class="box-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse in qui quo, blanditiis dolorum, eveniet praesentium alias dolor nesciunt cupiditate sapiente ex eaque ab odio excepturi neque molestiae placeat!</div>
-                </div>
-                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column text-center">
-                    <div class="box-header h3">Bs Education
+                    <div class="box-content">Bachelor of Science in Education is an undergraduate degree design for student who aspire to become educators. it provides theoretical knowledge, practical skill, and training necessary to teach in schools..</div>
+                    <div class="box-modal mt-3">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#hospi">Requirements</button>
                     </div>
-                    <div class="box-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse in qui quo, blanditiis dolorum, eveniet praesentium alias dolor nesciunt cupiditate sapiente ex eaque ab odio excepturi neque molestiae placeat!</div>
+                </div>
+
+                <div class="box shadow rounded-3 p-4 d-flex justify-content-center align-items-center flex-column">
+                    <div class="box-header h3">Bs Education</div>
+                    <div class="box-content">Bachelor of Science in Education is an undergraduate degree design for student who aspire to become educators. it provides theoretical knowledge, practical skill, and training necessary to teach in schools..</div>
+                    <div class="box-modal mt-3">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#educ">Requirements</button>
+                    </div>
                 </div>
             
             
@@ -368,62 +415,62 @@ $result_announcements = $conn->query($sql_announcements);
 
         <!--updates-->
         <div class="section updates p-5" id="updates">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-header h2">
-                        Events
-                    </div>
-                    <div class="card-body">
-                        <?php
-                        if ($result_events->num_rows > 0) {
-                            while ($row = $result_events->fetch_assoc()) {
-                                echo "<div class='card mb-3'>";
-                                if (!empty($row['image'])) {
-                                    echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' class='card-img-top' alt='Event Image'>";
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header h2">
+                                Events
+                            </div>
+                            <div class="card-body">
+                                <?php
+                                if ($result_events->num_rows > 0) {
+                                    while ($row = $result_events->fetch_assoc()) {
+                                        echo "<div class='card mb-3'>";
+                                        if (!empty($row['image'])) {
+                                            echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' class='card-img-top' alt='Event Image'>";
+                                        }
+                                        echo "<div class='card-body'>";
+                                        echo "<h5 class='card-title'>" . htmlspecialchars($row['title']) . "</h5>";
+                                        echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['description'])) . "</p>";
+                                        echo "<p class='card-text'><small class='text-muted'>Scheduled on " . $row['event_date'] . "</small></p>";
+                                        echo "</div></div>";
+                                    }
+                                } else {
+                                    echo "<p>No events available.</p>";
                                 }
-                                echo "<div class='card-body'>";
-                                echo "<h5 class='card-title'>" . htmlspecialchars($row['title']) . "</h5>";
-                                echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['description'])) . "</p>";
-                                echo "<p class='card-text'><small class='text-muted'>Scheduled on " . $row['event_date'] . "</small></p>";
-                                echo "</div></div>";
-                            }
-                        } else {
-                            echo "<p>No events available.</p>";
-                        }
-                        ?>
+                                ?>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-header h2">
-                        Announcements
-                    </div>
-                    <div class="card-body">
-                        <?php
-                        if ($result_announcements->num_rows > 0) {
-                            while ($row = $result_announcements->fetch_assoc()) {
-                                echo "<div class='card mb-3'>";
-                                echo "<div class='card-body'>";
-                                echo "<h5 class='card-title'>" . htmlspecialchars($row['title']) . "</h5>";
-                                echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['message'])) . "</p>";
-                                echo "<p class='card-text'><small class='text-muted'>Posted on " . $row['created_at'] . "</small></p>";
-                                echo "</div></div>";
-                            }
-                        } else {
-                            echo "<p>No announcements available.</p>";
-                        }
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header h2">
+                                Announcements
+                            </div>
+                            <div class="card-body">
+                                <?php
+                                if ($result_announcements->num_rows > 0) {
+                                    while ($row = $result_announcements->fetch_assoc()) {
+                                        echo "<div class='card mb-3'>";
+                                        echo "<div class='card-body'>";
+                                        echo "<h5 class='card-title'>" . htmlspecialchars($row['title']) . "</h5>";
+                                        echo "<p class='card-text'>" . nl2br(htmlspecialchars($row['message'])) . "</p>";
+                                        echo "<p class='card-text'><small class='text-muted'>Posted on " . $row['created_at'] . "</small></p>";
+                                        echo "</div></div>";
+                                    }
+                                } else {
+                                    echo "<p>No announcements available.</p>";
+                                }
 
-                        $conn->close();
-                        ?>
+                                $conn->close();
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
         <!--Contact-->
         <div class="section contact p-5 bg-light" id="contact">
@@ -445,6 +492,7 @@ $result_announcements = $conn->query($sql_announcements);
             </div>
         </div>
 
+        <!--Faqs-->
         <div class="faqs">
             <div class="chat-head" onclick="toggleChat()">
                 <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat Icon">
@@ -461,6 +509,205 @@ $result_announcements = $conn->query($sql_announcements);
             © 2024 Kalinga Colleges of Science and Technology. All rights reserved.
         </div>
     </div>
+    
+
+    <!--basic modal-->
+    <div class="modal" id="basic">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Basic Education</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./asset/img/basic-educ.jpg" 
+                         class="img-fluid mb-2 rounded-3 vw-100" 
+                         alt=""
+                         style="max-height:400px">
+                    <ul>
+                        <li>Original Grade 12 Senior High School Report Card (F-138)</li>
+                        <li>Original F137 (with request letter from KCST)</li>
+                        <li>Original Certificate of Good Moral Character issued in the current year</li>
+                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
+                        <li>Clear photocopy of PSA Birth Certificate;</li>
+                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
+                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--hs modal-->
+    <div class="modal" id="hs">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Junior & Senior High School</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./asset/img/senior-high.jpg" 
+                         class="img-fluid mb-2 rounded-3 vw-100" 
+                         alt=""
+                         style="max-height:400px">
+                    <ul>
+                        <li>Original Grade 12 Senior High School Report Card (F-138)</li>
+                        <li>Original F137 (with request letter from KCST)</li>
+                        <li>Original Certificate of Good Moral Character issued in the current year</li>
+                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
+                        <li>Clear photocopy of PSA Birth Certificate;</li>
+                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
+                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--it modal-->
+    <div class="modal" id="it">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BS Information Technology</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./asset/img/bsit.jpg" 
+                         class="img-fluid mb-2 rounded-3 vw-100" 
+                         alt=""
+                         style="max-height:400px">
+                    <ul>
+                        <li>Original Grade 12 Senior High School Report Card (F-138) </li>
+                        <li>Original F137 (with request letter from KCST)</li>
+                        <li>Original Certificate of Good Moral Character issued in the current year</li>
+                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
+                        <li>Clear photocopy of PSA Birth Certificate;</li>
+                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
+                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--criminology modal-->
+    <div class="modal" id="crim">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BS Criminology</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./asset/img/crim.jpg" 
+                         class="img-fluid mb-2 vw-100 rounded-3" 
+                         alt="" 
+                         style="max-height:400px">
+                    <ul>
+                        <li>Original Grade 12 Senior High School Report Card (F-138)</li>
+                        <li>Original F137 (with request letter from KCST)</li>
+                        <li>Original Certificate of Good Moral Character issued in the current year</li>
+                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
+                        <li>Clear photocopy of PSA Birth Certificate;</li>
+                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
+                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--computerEngineering modal-->
+    <div class="modal" id="comp">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BS Computer Engineering</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./asset/img/bsce.jpg" 
+                         class="img-fluid mb-2 vw-100 rounded-3" 
+                         alt="" 
+                         style="max-height:400px;">
+                    <ul>
+                        <li>Original Grade 12 Senior High School Report Card (F-138)</li>
+                        <li>Original F137 (with request letter from KCST)</li>
+                        <li>Original Certificate of Good Moral Character issued in the current year</li>
+                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
+                        <li>Clear photocopy of PSA Birth Certificate;</li>
+                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
+                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--hospitality modal-->
+    <div class="modal" id="hospi">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BS Hospitality</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./asset/img/bshm.jpg" 
+                         class="img-fluid vw-100 mb-2 rounded-3" 
+                         alt="" 
+                         style="max-height: 400px;">
+                    <ul>
+                        <li>Original Grade 12 Senior High School Report Card (F-138)</li>
+                        <li>Original F137 (with request letter from KCST)</li>
+                        <li>Original Certificate of Good Moral Character issued in the current year</li>
+                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
+                        <li>Clear photocopy of PSA Birth Certificate;</li>
+                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
+                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--education modal-->
+    <div class="modal" id="educ">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BS Education</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./asset/img/educ.jpg" 
+                         class="img-fluid vw-100 mb-2 rounded-3" 
+                         alt="" 
+                         style="max-height: 400px;">
+                    <ul>
+                        <li>Original Grade 12 Senior High School Report Card (F-138)</li>
+                        <li>Original F137 (with request letter from KCST)</li>
+                        <li>Original Certificate of Good Moral Character issued in the current year</li>
+                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
+                        <li>Clear photocopy of PSA Birth Certificate;</li>
+                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
+                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
 
     <script>
@@ -471,6 +718,13 @@ $result_announcements = $conn->query($sql_announcements);
             } else {
                 navbar.classList.remove('bg-dark');
             }
+
+            document.querySelectorAll('.fade-up').forEach(function(element) {
+                var rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    element.classList.add('visible');
+                }
+            });
         });
 
         document.querySelectorAll('.offcanvas a.nav-link').forEach(function(link) {
@@ -481,9 +735,10 @@ $result_announcements = $conn->query($sql_announcements);
             });
         });
 
-        // Add fade-up class to #demo section
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('demo').classList.add('fade-up');
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.classList.add('fade-up');
+            });
         });
         
     </script>
