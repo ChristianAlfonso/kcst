@@ -290,7 +290,7 @@ $result_announcements = $conn->query($sql_announcements);
         </div>
 
         <!--Why-->
-        <div class="section about d-flex justify-content-center align-items-center p-5 flex-column">
+        <div class="section about d-flex justify-content-center align-items-center p-3 flex-column">
             <div class="about-header">
                 <h2>Why Study at KCST?</h2>
             </div>
@@ -367,7 +367,7 @@ $result_announcements = $conn->query($sql_announcements);
         </div>
 
         <!--Programs-->
-        <div class="section program p-5 bg-light" id="programs">
+        <div class="section program p-3 bg-light" id="programs">
             <div class="program-header text-center">
                 <h2>Programs</h2>
             </div>
