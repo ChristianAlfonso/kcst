@@ -138,7 +138,7 @@ $result_announcements = $conn->query($sql_announcements);
 
     <div class="landing">
         <!--Navbar-->
-        <div class="navbar navbar-expand-lg navbar-dark fixed-top d-flex justify-content-between align-items-center">
+        <div class="navbar navbar-expand-xl navbar-dark fixed-top d-flex justify-content-between align-items-center">
 
             <div class="navbar-brand d-flex justify-content-center align-items-center">
                 <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
