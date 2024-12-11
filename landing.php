@@ -158,12 +158,30 @@ $result_announcements = $conn->query($sql_announcements);
                     <li class="nav-item">
                         <a href="#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">ABOUT</a>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#objective" class="dropdown-item">Objective</a>
+                            </li>
+                            <li>
+                                <a href="#core" class="dropdown-item">Core Values</a>
+                            </li>
+                            <li>
+                                <a href="#history" class="dropdown-item">History Logo</a>
+                            </li>
+                        </ul>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="#carouselExample" class="nav-link">GALLERY</a>
+                    </li>
+
                     <li class="nav-item">
                         <a href="#programs" class="nav-link">PROGRAMS</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="#updates" class="nav-link">CAMPUS UPDATES</a>
                     </li>
@@ -199,13 +217,26 @@ $result_announcements = $conn->query($sql_announcements);
                             <a href="#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
                         </li>
 
+                       
                         <li class="nav-item">
-                            <a href="#about" class="nav-link">ABOUT</a>
-                        </li>   
+                                <a href="#objective" class="nav-link">OBJECTIVE</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="#core" class="nav-link">CORE VALUES</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="#history" class="nav-link">HISTORY LOGO</a>
+                        </li>
+                 
+                        
+                        <li class="nav-item">
+                            <a href="#carouselExample" class="nav-link">GALLERY</a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="#programs" class="nav-link">PROGRAMS</a>
                         </li>
+
                         <li class="nav-item">
                             <a href="#updates" class="nav-link">CAMPUS UPDATES</a>
                         </li>
@@ -291,6 +322,46 @@ $result_announcements = $conn->query($sql_announcements);
             </div>
         </div>
 
+        <!--About objective-->
+
+            <div class="section about-us bg-light d-flex justify-content-center align-item-center" id="objective">
+                <div class="box d-flex justify-content-end align-items-center p-5"  id="about-img">
+                    <img src="./asset/img/objective.png" alt="" class="img-fluid shadow p-3 rounded-3" style="width: 400px">
+                </div>
+                <div class="box d-flex justify-content-center align-items-start flex-column p-5">
+                    <h5>Objective</h5>
+                    <p>To provide moral, intellectual training and upright living in a christian atsmosphere.</p>
+                    <p>To contribute the students' potentials by efficient and responsible professional.</p>
+                </div>
+            </div>
+
+            <div class="section about-us bg-light d-flex justify-content-center align-item-center" id="core">
+                
+                <div class="box d-flex justify-content-center align-items-end flex-column p-5">
+                    <h5>Core Values</h5>
+                    <p>To Maintain its vision and mision, KCST shall inculate and promote the internalization of values founded on equality of opportunity, social justice, social awareness and understanding of a dynamic Filipino in thoughts, words, and deeds.</p>
+                </div>
+
+                <div class="box d-flex p-5 justify-content-start align-items-center" id="about-img">
+                    <img src="./asset/img/core-value.png" alt="" class="img-fluid shadow p-3 rounded-3"  style="width: 400px">
+                </div>
+            </div>
+
+            <div class="section about-us bg-light d-flex justify-content-center align-item-center" id="history">
+                <div class="box d-flex justify-content-end align-items-center p-5" id="about-img">
+                    <img src="./asset/img/kcst1.png" alt="" class="img-fluid shadow p-3 rounded-3" id="about-img" style="width: 400px">
+                </div>
+                <div class="box d-flex justify-content-center align-items-start flex-column p-5">
+                    <h5>History Of KCST Logo</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, dolore? Earum reprehenderit culpa quae corrupti veniam excepturi odit quasi ipsa animi sit aperiam nam ratione recusandae, eos illum error ipsam?</p>
+                    <p class="text-light p-3" style="background-color: #818134">Moss Green: #818134</p>
+                    <p class="p-3" style="background-color: #e9e6e4">Heavenly White: #e9e6e4</p>
+                </div>
+            </div>
+
+        
+
+
         <!-- Carousel -->
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
 
@@ -334,11 +405,6 @@ $result_announcements = $conn->query($sql_announcements);
                     <span class="carousel-control-next-icon"></span>
                     </button>
         </div>
-
-        <!--About-->
-        <div class="section about-us vh-100 d-flex justify-content-center align-items-center p-5 flex-column" id="about">
-
-         </div>
 
         <!--Programs-->
         <div class="section program p-5 bg-light" id="programs">
@@ -699,12 +765,6 @@ $result_announcements = $conn->query($sql_announcements);
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
 
 

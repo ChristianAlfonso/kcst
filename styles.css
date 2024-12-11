@@ -77,6 +77,25 @@
     background: url(./asset/img/kcst-hero.png) no-repeat center / cover;
 }
 
+
+#objective, #core, #history {
+    flex-wrap: wrap;
+}
+
+#objective .box {
+    flex: 1;
+}
+#core .box {
+    flex: 1;
+
+}
+
+#history .box {
+    flex: 1;
+
+}
+
+
 .program {
     transition: all 0.6 ease;
 }
@@ -158,6 +177,13 @@
         background-color: #212529;
         color: whitesmoke;
     }
+}
+
+@media (max-width: 800px) {
+    #about-img  {
+        display: none !important;
+    }
+
 }
 
 @media (max-width: 500px) {
