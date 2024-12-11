@@ -90,27 +90,40 @@ $conn->close();
                                 <img src="./asset/img/kcst1.png" alt="" style="height: 50px;">
                                 <h1 class="text-light">KCST</h1>
                             </div>
-                            <div class="sidebar-nav mt-3">
+                            <div class="profile mt-3 text-light flex-column d-flex justify-content-start align-items-center" style="gap: 5px">
+                                <img src="./asset/img/profile.png" class="img-fluid" style="width: 150px" alt=""> Welcome, Admin
+                            </div>
+                            <div class="sidebar-nav mt-5">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a href="admin-announcement.php" class="nav-link text-light">Post Announcement</a>
+                                        <a href="admin-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                            <img src="./asset/img/announce.png" style="width: 30px" class="img-fluid" alt="">
+                                            Post Announcement</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="admin-event.php" class="nav-link text-light">Post Event</a>
+                                        <a href="admin-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                            <img src="./asset/img/event.png" style="width: 30px" class="img-fluid" alt="">
+                                            Post Event</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="delete-announcement.php" class="nav-link text-light">Delete Announcement</a>
+                                        <a href="delete-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <img src="./asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
+                                        Delete Announcement</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="delete-event.php" class="nav-link text-light">Delete Event</a>
+                                        <a href="delete-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <img src="./asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
+                                        Delete Event</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link text-light">Logout</a>
+                                        <a href=""  class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <img src="./asset/img/logout.png" style="width: 30px" class="img-fluid" alt="">    
+                                        Logout</a>
                                     </li>
                                 </ul>
+                             </div>
                         </div>
-                </div>
-</div>
+        </div>
         <!--offcanvas for navbar-->
         <div class="offcanvas offcanvas-end" id="responsiveSidebar">
             <div class="offcanvas-header">
