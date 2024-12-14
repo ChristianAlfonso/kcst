@@ -349,7 +349,7 @@ $result_announcements = $conn->query($sql_announcements);
         <!--elem process-->
         <div class="container-fluid d-flex justify-content-center align-items-center flex-column" id="other-process" style="min-height: 100vh;">
 
-            <div class="box" style="min-height: 29.7cm; width: 30cm; background: white; border: 2px solid red" id="college-form-front">
+            <div class="box mt-3" style="min-height: 29.7cm; width: 30cm; background: white;" id="college-form-front">
                     <header class="d-flex justify-content-center align-items-center">
                         <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
                         <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
