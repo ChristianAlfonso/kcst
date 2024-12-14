@@ -186,6 +186,7 @@ $result_announcements = $conn->query($sql_announcements);
                         </ul>
                     </li>
 
+
                     <li class="nav-item">
                         <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
                     </li>
@@ -233,9 +234,11 @@ $result_announcements = $conn->query($sql_announcements);
                         <li class="nav-item">
                                 <a href="objective.php" class="nav-link">OBJECTIVES</a>
                         </li>
+
                         <li class="nav-item">
                                 <a href="core.php" class="nav-link">CORE VALUES</a>
                         </li>
+
                         <li class="nav-item">
                                 <a href="history.php" class="nav-link">HISTORY LOGO</a>
                         </li>
@@ -247,7 +250,7 @@ $result_announcements = $conn->query($sql_announcements);
                         <li class="nav-item">
                                 <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
                         </li>
-                 
+                        
                         
                         <li class="nav-item">
                             <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
@@ -273,20 +276,111 @@ $result_announcements = $conn->query($sql_announcements);
 
         </div>
         
+
+        <!--other process-->
+        <div class="container-fluid d-flex justify-content-center align-items-center" id="other-process" style="min-height: 100vh;flex-wrap: wrap; gap: 1rem; padding-top: 5rem;">
+
+            <div class="box bg-light rounded-3 shadow p-3 m-3" style="width: 400px; min-height: 35rem">
+
+                <header class="d-flex justify-content-center align-items-center">
+                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                        <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                        <label>Moldero St., Purok 5, Bulanao</lab> <br>
+                        <label>Tabuk City, Kalinga 3800</label> <br>
+                    </div>
+                </header>
+
+                <div class="box-body p-3">
+                    <p class="text-primary">ENROLLMENT PROCEDURE</p>
+                    <p style="font-size: 11px;">
+
+                        <strong>For Freshmen:</strong><br>
+
+                        1. Present all Requirements to the Registrar's Office and get an enrollment form.<br>
+                        2. Fill up the form correctly.<br>
+                        3. Proceed to Registrar's Office for signing.<br>
+                        4. And lastly, proceed to the cashier for down payment.<br>
+
+                        <strong>For Old Students:</strong><br>
+
+                        1. Get a request slip for the True Copy of Grades (TCG) and proceed to the cashier.<br>
+                        2. Go back to the Registrar's office for the release of TCG.<br>
+                        3. Present the TCG to the Dean's Office for evaluation.<br>
+                        4. Go back to Registrar's Office for Signing.<br>
+                        5. Lastly, proceed to the cashier for Down Payment.<br>
+
+                        <strong>For Transferees:</strong><br>
+
+                        1. Submit your Transfer Credential at the Registrar's Office for evaluation, get the RETURN SLIP COPY and return/send to the school where you came from for the release of your OTR. Deadline of submission is on or before the end of the semester.<br>
+                        2. Proceed at the enrollment area.<br>
+                        3. Go back to the Registrar's Office for signing.<br>
+                        4. Proceed to the cashier for payment and claim your class cards.<br>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="box bg-light rounded-3 shadow p-3 m-3" style="width: 400px; min-height: 35rem">
+                <header class="d-flex justify-content-center align-items-center">
+                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                    <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                        <label>Moldero St., Purok 5, Bulanao</label> <br>
+                        <label>Tabuk City, Kalinga 3800</label> <br>
+                    </div>
+                </header>
+                <div class="box-body p-3">
+                    <p class="text-primary">RELEASING OF BILLING</p>
+                    <p style="font-size: 11px;">
+
+                        <strong>A. For Undergraduate Students:</strong> <br>
+
+                            Get a REQUEST SLIP from the Registrar's Office.<br>
+                            Fill up the form correctly.<br>
+                            State the reason for request.<br>
+                            Proceed to cashier for the payment of the requested documents.<br>
+                            Submit the request slip to the registrar's office. (Duration: 3 working days.)<br>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="box bg-light rounded-3 shadow p-3 m-3" style="width: 400px; min-height: 35rem">
+                <header class="d-flex justify-content-center align-items-center">
+                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                    <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                        <label>Moldero St., Purok 5, Bulanao</label> <br>
+                        <label>Tabuk City, Kalinga 3800</label> <br>
+                    </div>
+                </header>
+                <div class="box-body p-3">
+                    <p class="text-primary">RELEASING OF GOOD MORAL CERTIFICATE</p>
+                    <p style="font-size: 11px;">
+
+                        <strong>B. For Graduates:</strong><br>
+
+                        Get a REQUEST SLIP from the Registrar's Office.<br>
+                        Fill up the form correctly.<br>
+                        Check your desired documents to be release (Specify the purpose, i.e. For Employment, For PNP Application, Etc)<br>
+                        Be cleared up from your Clearance:<br>
+                        a. Custodian<br>
+                        b. Departmental Dean<br>
+                        c. Registrar<br>
+                        d. Cashier<br>
+                        Submit your Request Slip together with your receipt to the Registrar's Office.<br>
+                        Take your Claim Slip.<br>
+                        After 15 working days, Present to the Registrar's Office your Claim Slip for the release of the requested documents.<br>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
       
 
-        <div class="container-fluid vh-100 d-flex justify-content-center align-items-center" id="objective">
-        <div class="container d-flex mt-5" style="height: auto; width: 50rem;" id="objective-content">
-            <div class="box bg-light rounded-3 p-3 d-flex justify-content-center align-items-center shadow" style="flex: 1;">
-                <img src="./asset/img/core-value.png" class="img-fluid" style="width: 200px" alt="">
-            </div>
-            <div class="box p-3 d-flex justify-content-center align-items-start flex-column text-light" style="flex: 1;">
-                <h1 class="text-center">Core Values</h1>
-                <p class="text-justify">
-                To Maintain its vision and mision, KCST shall inculate and promote the internalization of values founded on equality of opportunity, social justice, social awareness and understanding of a dynamic Filipino in thoughts, words, and deeds.
-            </div>
-        </div>
-    </div>
+                   
+     
     
 
     

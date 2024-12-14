@@ -9,6 +9,7 @@
 
 .navbar {
     padding: 2%;
+    font-size: 0.8rem;
 }
 
 /*Login Page*/
@@ -196,5 +197,11 @@
 
 
 #objective {
+    background: url(./asset/img/blur-bg.png) no-repeat center / cover;
+}
+
+
+#other-process 
+{
     background: url(./asset/img/blur-bg.png) no-repeat center / cover;
 }

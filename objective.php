@@ -174,6 +174,18 @@ $result_announcements = $conn->query($sql_announcements);
                         </ul>
                     </li>
 
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="enrollment-form.php" class="dropdown-item">ENROLLMENT E-FORM</a>
+                            </li>
+                            <li>
+                                <a href="other-process.php" class="dropdown-item">OTHER PROCESS</a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item">
                         <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
                     </li>
@@ -226,6 +238,14 @@ $result_announcements = $conn->query($sql_announcements);
                         </li>
                         <li class="nav-item">
                                 <a href="history.php" class="nav-link">HISTORY LOGO</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a href="enrollment-form.php" class="nav-link">ENROLLMENT E-FORM</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
                         </li>
                  
                         
