@@ -359,19 +359,24 @@ $result_announcements = $conn->query($sql_announcements);
         </div>
         
             <div class="box mt-3 p-3" style="min-height: 29.7cm; width: 30cm; background: white;" id="college-form-front">
-                    <header class="d-flex justify-content-center align-items-center">
-                        <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
-                        <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
-                            <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
-                            <label>Moldero St., Purok 5, Bulanao</lab> <br>
-                            <label>Tabuk City, Kalinga 3800</label> <br>
-                        </div>
-                    </header>
+                  
                     <table class="table-equal table table-borderless" style="font-size: 13px;">
+                        <tr>
+                            <td colspan="5">
+                                <header class="d-flex justify-content-center align-items-center">
+                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                                        <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                                        <label>Moldero St., Purok 5, Bulanao</lab> <br>
+                                        <label>Tabuk City, Kalinga 3800</label> <br>
+                                    </div>
+                                </header>
+                            </td>
+                        </tr>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td class="text-center">JUNIOR HIGH DEPARTMENT ENROLLMENT FORM</td>
+                            <td class="text-center">ELEMENTARY DEPARTMENT ENROLLMENT FORM</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -447,7 +452,7 @@ $result_announcements = $conn->query($sql_announcements);
                         <tr>
                             <td>Admitted to GRADE N/K:</td>
                             <td></td>
-                            <td class="text-center"> 7     8     9     10</td>
+                            <td class="text-center"> 1     2     3     4     5     6</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -468,19 +473,24 @@ $result_announcements = $conn->query($sql_announcements);
                         </tr>
                     </table>
 
-                    <header class="d-flex justify-content-center align-items-center">
-                        <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
-                        <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
-                            <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
-                            <label>Moldero St., Purok 5, Bulanao</lab> <br>
-                            <label>Tabuk City, Kalinga 3800</label> <br>
-                        </div>
-                    </header>
+                   
                     <table class="table-equal table table-borderless" style="font-size: 13px;">
+                        <tr>
+                            <td colspan="5">
+                                <header class="d-flex justify-content-center align-items-center">
+                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                                        <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                                        <label>Moldero St., Purok 5, Bulanao</lab> <br>
+                                        <label>Tabuk City, Kalinga 3800</label> <br>
+                                    </div>
+                                </header>
+                            </td>
+                        </tr>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td class="text-center">JUNIOR HIGH DEPARTMENT ENROLLMENT FORM</td>
+                            <td class="text-center">ELEMENTARY DEPARTMENT ENROLLMENT FORM</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -556,7 +566,7 @@ $result_announcements = $conn->query($sql_announcements);
                         <tr>
                             <td>Admitted to GRADE N/K:</td>
                             <td></td>
-                            <td class="text-center"> 7     8     9     10</td>
+                            <td class="text-center"> 1     2     3     4     5     6</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -576,20 +586,24 @@ $result_announcements = $conn->query($sql_announcements);
                             </td>
                         </tr>
                     </table>
-
-                    <header class="d-flex justify-content-center align-items-center">
-                        <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
-                        <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
-                            <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
-                            <label>Moldero St., Purok 5, Bulanao</lab> <br>
-                            <label>Tabuk City, Kalinga 3800</label> <br>
-                        </div>
-                    </header>
+                    
                     <table class="table-equal table table-borderless" style="font-size: 11px;">
+                        <tr>
+                            <td colspan="5">
+                                <header class="d-flex justify-content-center align-items-center">
+                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                                        <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                                        <label>Moldero St., Purok 5, Bulanao</lab> <br>
+                                        <label>Tabuk City, Kalinga 3800</label> <br>
+                                    </div>
+                                </header>
+                            </td>
+                        </tr>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td class="text-center">JUNIOR HIGH DEPARTMENT ENROLLMENT FORM</td>
+                            <td class="text-center">ELEMENTARY DEPARTMENT ENROLLMENT FORM</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -704,7 +718,7 @@ $result_announcements = $conn->query($sql_announcements);
                     <tr>
                         <td></td>
                         <td>is admitted to GRADE</td>
-                        <td>7 - 8 - 9 - 10</td>
+                        <td>1 - 2 - 3 - 4 - 5 - 6 </td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -729,7 +743,7 @@ $result_announcements = $conn->query($sql_announcements);
                     </tr>
                     <tr>
                         <td></td>
-                        <td colspan="2">( ) Others (Specify) ________________________</td>
+                        <td colspan="2">( ) Others (Specify) <span contenteditable="true">_______  </span></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -869,7 +883,7 @@ $result_announcements = $conn->query($sql_announcements);
                     <tr>
                         <td colspan="5" class="text-center">
                         I have fully read and understand the terms and condition of the agreement and I fully and willingly accept the said condition and
-                        agreement, thereby; I set my hand this ________ day of ________________ at KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY
+                        agreement, thereby; I set my hand this<span contenteditable="true">_______  </span>day of<span contenteditable="true">_______  </span> at KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY
                         as strongly agreed upon.
                         </td>
                     </tr>
@@ -883,13 +897,13 @@ $result_announcements = $conn->query($sql_announcements);
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td colspan="2">
+                        <td colspan="2" class="text-center">
                             <p class="px-3" style="border-top: 1px solid black">Signature over printed name of Parent's/Guardian's</p>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2">Admitted By:</td>
-                        <td colspan="2">Attested By:</td>
+                        <td colspan="2">Admitted By:<span contenteditable="true">_______  </span></td>
+                        <td colspan="2">Attested By:<span contenteditable="true">_______  </span></td>
                         <td></td>
                     </tr>
                     <tr>

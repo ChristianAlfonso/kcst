@@ -148,7 +148,8 @@ $result_announcements = $conn->query($sql_announcements);
             width: 100%;
             border-collapse: collapse;
             table-layout: fixed;
-            font-weight: bold;
+            border-bottom: 1px solid black;
+            font-size: 13px;
         }
 
         .table-equal td {
@@ -209,144 +210,155 @@ $result_announcements = $conn->query($sql_announcements);
 <body>
 
     <div class="landing">
-        <!--Navbar-->
+         <!--Navbar-->
         <div class="navbar navbar-expand-xl navbar-dark bg-dark d-flex justify-content-between align-items-center">
 
-            <div class="navbar-brand d-flex justify-content-center align-items-center">
-                <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
-                <h1>KCST</h1>
-            </div>
+<div class="navbar-brand d-flex justify-content-center align-items-center">
+    <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
+    <h1>KCST</h1>
+</div>
 
-            <button class="navbar-toggler" data-bs-target="#navbar-offcanvas" data-bs-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<button class="navbar-toggler" data-bs-target="#navbar-offcanvas" data-bs-toggle="offcanvas">
+    <span class="navbar-toggler-icon"></span>
+</button>
 
-            <div class="navbar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="landing.php#home" class="nav-link">HOME</a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                    </li>
+<div class="navbar-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="landing.php#home" class="nav-link">HOME</a>
+        </li>
+    
+        <li class="nav-item">
+            <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
+        </li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#landing.php" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="objective.php" class="dropdown-item">Objective</a>
-                            </li>
-                            <li>
-                                <a href="core.php" class="dropdown-item">Core Values</a>
-                            </li>
-                            <li>
-                                <a href="history.php" class="dropdown-item">History Logo</a>
-                            </li>
-                        </ul>
-                    </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="objective.php" class="dropdown-item">Objective</a>
+                </li>
+                <li>
+                    <a href="core.php" class="dropdown-item">Core Values</a>
+                </li>
+                <li>
+                    <a href="history.php" class="dropdown-item">History Logo</a>
+                </li>
+            </ul>
+        </li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="enrollment-form.php" class="dropdown-item">ENROLLMENT E-FORM</a>
-                            </li>
-                            <li>
-                                <a href="other-process.php" class="dropdown-item">OTHER PROCESS</a>
-                            </li>
-                        </ul>
-                    </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="college-form.php" class="dropdown-item">COLLEGE E-FORM</a>
+                </li>
+                <li>
+                    <a href="highschool-form.php" class="dropdown-item">HIGHSCHOOL E-FORM</a>
+                </li>
+                <li>
+                    <a href="elem-form.php" class="dropdown-item">ELEMENTARY E-FORM</a>
+                </li>
+                <li>
+                    <a href="other-process.php" class="dropdown-item">OTHER PROCESS</a>
+                </li>
+            </ul>
+        </li>
 
+        <li class="nav-item">
+            <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
+        </li>
 
-                    <li class="nav-item">
-                        <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
-                    </li>
+        <li class="nav-item">
+            <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
+        </li>
 
-                    <li class="nav-item">
-                        <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
-                    </li>
+        <li class="nav-item">
+            <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
+        </li>
+       
+        <li class="nav-item">
+            <a href="landing.php#contact" class="nav-link">CONTACT</a>
+        </li>
+    </ul>
+</div>
 
-                    <li class="nav-item">
-                        <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
-                    </li>
-                   
-                    <li class="nav-item">
-                        <a href="landing.php#contact" class="nav-link">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
+<div class="navbar-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="login.php" class="nav-link">ADMIN</a>
+        </li>
+    </ul>
+</div>
 
-            <div class="navbar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="login.php" class="nav-link">ADMIN</a>
-                    </li>
-                </ul>
-            </div>
+<!--Navbar Offcanvas-->
 
-            <!--Navbar Offcanvas-->
+<div class="offcanvas offcanvas-end" id="navbar-offcanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="landing.php#home" class="nav-link">HOME</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
+            </li>
 
-            <div class="offcanvas offcanvas-end" id="navbar-offcanvas">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title">Menu</h5>
-                    <button class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="landing.php#home" class="nav-link">HOME</a>
-                        </li>
-                    
-                        <li class="nav-item">
-                            <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                        </li>
+           
+            <li class="nav-item">
+                    <a href="objective.php" class="nav-link">OBJECTIVES</a>
+            </li>
+            <li class="nav-item">
+                    <a href="core.php" class="nav-link">CORE VALUES</a>
+            </li>
+            <li class="nav-item">
+                    <a href="history.php" class="nav-link">HISTORY LOGO</a>
+            </li>
 
-                       
-                        <li class="nav-item">
-                                <a href="objective.php" class="nav-link">OBJECTIVES</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="college-form.php" class="nav-link">COLLEGE E-FORM</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="core.php" class="nav-link">CORE VALUES</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="highschool-form.php" class="nav-link">HIGHSCHOOL E-FORM</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="history.php" class="nav-link">HISTORY LOGO</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="elem-form.php" class="nav-link">ELEMENTARY E-FORM</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="enrollment-form.php" class="nav-link">ENROLLMENT E-FORM</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
+            </li>
+     
+            
+            <li class="nav-item">
+                <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
-                        </li>
-                        
-                        
-                        <li class="nav-item">
-                            <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
-                        </li>
+            <li class="nav-item">
+                <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
-                        </li>
+            <li class="nav-item">
+                <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="landing.php#contact" class="nav-link">CONTACT</a>
+            </li>
+            <li class="nav-item">
+                <a href="login.php" class="nav-link">Login as Admin</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-                        <li class="nav-item">
-                            <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
-                        </li>
-                    
-                        <li class="nav-item">
-                            <a href="landing.php#contact" class="nav-link">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="login.php" class="nav-link">Login as Admin</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+</div>
         
 
         <!--elem process-->
@@ -357,15 +369,338 @@ $result_announcements = $conn->query($sql_announcements);
             <strong>Reminder!</strong>  Click the lines to edit the content..
         </div>
         
-            <div class="box mt-3" style="min-height: 29.7cm; width: 30cm; background: white;" id="college-form-front">
-                    <header class="d-flex justify-content-center align-items-center">
-                        <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
-                        <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
-                            <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
-                            <label>Moldero St., Purok 5, Bulanao</lab> <br>
-                            <label>Tabuk City, Kalinga 3800</label> <br>
-                        </div>
-                    </header>
+            <div class="box mt-3 p-3" style="min-height: 29.7cm; width: 30cm; background: white;" id="college-form-front">
+                  
+                    <table class="table-equal table table-borderless" style="font-size: 13px;">
+                        <tr>
+                            <td colspan="5">
+                                <header class="d-flex justify-content-center align-items-center">
+                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                                        <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                                        <label>Moldero St., Purok 5, Bulanao</lab> <br>
+                                        <label>Tabuk City, Kalinga 3800</label> <br>
+                                    </div>
+                                </header>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">ELEMENTARY DEPARTMENT ENROLLMENT FORM</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Registart Copy</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2">OLD ( ) NEW ( ) OUT ( )  TRANSFERRED IN ( )</td>
+                        </tr>
+                        <tr>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>FAMILY NAME:</td>
+                            <td>GIVEN NAME</td>
+                            <td>MIDDLE NAME:</td>
+                            <td>Sex:<span contenteditable="true">_______  </span></td>
+                            <td>Birthdate:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">(mm/dd/yyyy):</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Birthplace:<span contenteditable="true">_______  </span></td>
+                            <td colspan="2">Home Address:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Father’s Name:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Occupation:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Contact#:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td>Mother’s Name:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Occupation:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Contact#:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr?>
+                            <td colspan="5">Parents/Guardians Mailing Address: <span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Last School Attended:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Name of School:</td>
+                            <td></td>
+                            <td>Business Address:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Admitted to GRADE N/K:</td>
+                            <td></td>
+                            <td class="text-center"> 1     2     3     4     5     6</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Admission:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2" class="text-center">
+                                <p style="border-top: 1px solid black;" class="p-3">Student’s/Parent’s/Guardian’s Signature over Printed Name:</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                   
+                    <table class="table-equal table table-borderless" style="font-size: 13px;">
+                        <tr>
+                            <td colspan="5">
+                                <header class="d-flex justify-content-center align-items-center">
+                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                                        <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                                        <label>Moldero St., Purok 5, Bulanao</lab> <br>
+                                        <label>Tabuk City, Kalinga 3800</label> <br>
+                                    </div>
+                                </header>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">ELEMENTARY DEPARTMENT ENROLLMENT FORM</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Principal, Guidance Copy</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2">OLD ( ) NEW ( ) OUT ( )  TRANSFERRED IN ( )</td>
+                        </tr>
+                        <tr>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>FAMILY NAME:</td>
+                            <td>GIVEN NAME</td>
+                            <td>MIDDLE NAME:</td>
+                            <td>Sex:<span contenteditable="true">_______  </span></td>
+                            <td>Birthdate:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">(mm/dd/yyyy):</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Birthplace:<span contenteditable="true">_______  </span></td>
+                            <td colspan="2">Home Address:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Father’s Name:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Occupation:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Contact#:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td>Mother’s Name:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Occupation:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Contact#:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr?>
+                            <td colspan="5">Parents/Guardians Mailing Address: <span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Last School Attended:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Name of School:</td>
+                            <td></td>
+                            <td>Business Address:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Admitted to GRADE N/K:</td>
+                            <td></td>
+                            <td class="text-center"> 1     2     3     4     5     6</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Admission:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2" class="text-center">
+                                <p style="border-top: 1px solid black;" class="p-3">Student’s/Parent’s/Guardian’s Signature over Printed Name:</p>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="table-equal table table-borderless" style="font-size: 11px;">
+                        <tr>
+                            <td colspan="5">
+                                <header class="d-flex justify-content-center align-items-center">
+                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                                        <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                                        <label>Moldero St., Purok 5, Bulanao</lab> <br>
+                                        <label>Tabuk City, Kalinga 3800</label> <br>
+                                    </div>
+                                </header>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">ELEMENTARY DEPARTMENT ENROLLMENT FORM</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Accounting Copy</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2">OLD ( ) NEW ( ) OUT ( )  TRANSFERRED IN ( )</td>
+                        </tr>
+                        <tr>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td><span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>FAMILY NAME:</td>
+                            <td>GIVEN NAME</td>
+                            <td>MIDDLE NAME:</td>
+                            <td>Sex:<span contenteditable="true">_______  </span> </td>
+                            <td>Birthdate:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">(mm/dd/yyyy):</td>
+                        </tr>
+                        <tr>
+                            <td>Down Payment:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Applied Monthly Fee:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td>Full Payment:<span contenteditable="true">_______  </span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Applied Availed Discounts:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tuition Fee:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Registration Fee:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Miscellaneous Fee:<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Others (Specify):<span contenteditable="true">_______  </span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">
+                                <p style="border-top: 1px solid black;" class="p-2">School Cashier</p>
+                            </td>
+                        </tr>
+                    </table>
+
 
                     
 
@@ -375,8 +710,221 @@ $result_announcements = $conn->query($sql_announcements);
             </div>
 
 
-            <div class="box mt-3 p-3"  style="min-height: 29.7cm; width: 30cm; background: white;" id="college-form-back">
-
+            <div class="box mt-3 py-4 px-3"  style="min-height: 29.7cm; width: 30cm; background: white;" id="college-form-back">
+                <table class="table table-borderless table-equal">
+                    <tr>
+                        <td><span contenteditable="true">_______  </span></td>
+                        <td></td>
+                        <td><span contenteditable="true">_______  </span></td>
+                        <td></td>
+                        <td><span contenteditable="true">_______  </span></td>
+                    </tr>
+                    <tr>
+                        <td>FAMILY NAME</td>
+                        <td></td>
+                        <td>GIVEN NAME</td>
+                        <td></td>
+                        <td>MIDDLE NAME</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>is admitted to GRADE</td>
+                        <td>1 - 2 - 3 - 4 - 5 - 6 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>REQUIREMENTS SUBMITTED:</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">( ) Form 138 (Report Card/Form 137/Permanent Record)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">( ) Birth Certificate (Photocopy/NSO Released)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">( ) Others (Specify) <span contenteditable="true">_______  </span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+                <table class="table table-borderless table-equal">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>SKETCH OF HOUSE LOCATION</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+                <table class="table table-borderless table-equal">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>PARENTS-SCHOOL AGREEMENT</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            1. Payments are required to attend quarterly parent-teacher meeting as scheduled. <br>
+                            2. Pay our financial obligation as per schedule of payment, the First Week of each month. If unable to pay on time,
+                            special arrangement will be made together with the school cashier. <br>
+                            3. No refund of payment if payment done is only for down payment assessed. <br>
+                            4. For full cash payment, refund of 40% on tuition fee only, if filed within three (3) days for regular academic year, and
+                            one (1) day for summer the opening of the class. <br>
+                            5. For payment in excess of down payment, 40% refund excess of tuition fee only if filed within three (3) days and one
+                            (1) day grace period after opening of the regular classes. <br>
+                            6. Attend one scheduled service at least once a month. 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-center">
+                        I have fully read and understand the terms and condition of the agreement and I fully and willingly accept the said condition and
+                        agreement, thereby; I set my hand this<span contenteditable="true">_______  </span>day of<span contenteditable="true">_______  </span> at KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY
+                        as strongly agreed upon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2" class="text-center">
+                            <p class="px-3" style="border-top: 1px solid black">Signature over printed name of Parent's/Guardian's</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Admitted By:<span contenteditable="true">_______  </span></td>
+                        <td colspan="2">Attested By:<span contenteditable="true">_______  </span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Admission Officer</td>
+                        <td></td>
+                        <td>School Cashier</td>
+                        <td></td>
+                    </tr>
+                </table>
             </div>
 
             <div class="print m-5">

@@ -233,7 +233,7 @@ $result_announcements = $conn->query($sql_announcements);
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="#landing.php" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="objective.php" class="dropdown-item">Objective</a>
@@ -251,14 +251,19 @@ $result_announcements = $conn->query($sql_announcements);
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="enrollment-form.php" class="dropdown-item">ENROLLMENT E-FORM</a>
+                                <a href="college-form.php" class="dropdown-item">COLLEGE E-FORM</a>
+                            </li>
+                            <li>
+                                <a href="highschool-form.php" class="dropdown-item">HIGHSCHOOL E-FORM</a>
+                            </li>
+                            <li>
+                                <a href="elem-form.php" class="dropdown-item">ELEMENTARY E-FORM</a>
                             </li>
                             <li>
                                 <a href="other-process.php" class="dropdown-item">OTHER PROCESS</a>
                             </li>
                         </ul>
                     </li>
-
 
                     <li class="nav-item">
                         <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
@@ -307,23 +312,29 @@ $result_announcements = $conn->query($sql_announcements);
                         <li class="nav-item">
                                 <a href="objective.php" class="nav-link">OBJECTIVES</a>
                         </li>
-
                         <li class="nav-item">
                                 <a href="core.php" class="nav-link">CORE VALUES</a>
                         </li>
-
                         <li class="nav-item">
                                 <a href="history.php" class="nav-link">HISTORY LOGO</a>
                         </li>
 
                         <li class="nav-item">
-                                <a href="enrollment-form.php" class="nav-link">ENROLLMENT E-FORM</a>
+                                <a href="college-form.php" class="nav-link">COLLEGE E-FORM</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a href="highschool-form.php" class="nav-link">HIGHSCHOOL E-FORM</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a href="elem-form.php" class="nav-link">ELEMENTARY E-FORM</a>
                         </li>
 
                         <li class="nav-item">
                                 <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
                         </li>
-                        
+                 
                         
                         <li class="nav-item">
                             <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
@@ -348,6 +359,7 @@ $result_announcements = $conn->query($sql_announcements);
             </div>
 
         </div>
+        
         
 
         <!--elem process-->

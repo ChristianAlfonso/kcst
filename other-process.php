@@ -137,144 +137,155 @@ $result_announcements = $conn->query($sql_announcements);
 <body>
 
     <div class="landing">
-        <!--Navbar-->
-        <div class="navbar navbar-expand-xl navbar-dark fixed-top d-flex justify-content-between align-items-center">
+<!--Navbar-->
+<div class="navbar navbar-expand-xl navbar-dark fixed-top d-flex justify-content-between align-items-center">
 
-            <div class="navbar-brand d-flex justify-content-center align-items-center">
-                <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
-                <h1>KCST</h1>
-            </div>
+<div class="navbar-brand d-flex justify-content-center align-items-center">
+    <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
+    <h1>KCST</h1>
+</div>
 
-            <button class="navbar-toggler" data-bs-target="#navbar-offcanvas" data-bs-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<button class="navbar-toggler" data-bs-target="#navbar-offcanvas" data-bs-toggle="offcanvas">
+    <span class="navbar-toggler-icon"></span>
+</button>
 
-            <div class="navbar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="landing.php#home" class="nav-link">HOME</a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                    </li>
+<div class="navbar-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="landing.php#home" class="nav-link">HOME</a>
+        </li>
+    
+        <li class="nav-item">
+            <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
+        </li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#landing.php" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="objective.php" class="dropdown-item">Objective</a>
-                            </li>
-                            <li>
-                                <a href="core.php" class="dropdown-item">Core Values</a>
-                            </li>
-                            <li>
-                                <a href="history.php" class="dropdown-item">History Logo</a>
-                            </li>
-                        </ul>
-                    </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="objective.php" class="dropdown-item">Objective</a>
+                </li>
+                <li>
+                    <a href="core.php" class="dropdown-item">Core Values</a>
+                </li>
+                <li>
+                    <a href="history.php" class="dropdown-item">History Logo</a>
+                </li>
+            </ul>
+        </li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="enrollment-form.php" class="dropdown-item">ENROLLMENT E-FORM</a>
-                            </li>
-                            <li>
-                                <a href="other-process.php" class="dropdown-item">OTHER PROCESS</a>
-                            </li>
-                        </ul>
-                    </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="college-form.php" class="dropdown-item">COLLEGE E-FORM</a>
+                </li>
+                <li>
+                    <a href="highschool-form.php" class="dropdown-item">HIGHSCHOOL E-FORM</a>
+                </li>
+                <li>
+                    <a href="elem-form.php" class="dropdown-item">ELEMENTARY E-FORM</a>
+                </li>
+                <li>
+                    <a href="other-process.php" class="dropdown-item">OTHER PROCESS</a>
+                </li>
+            </ul>
+        </li>
 
+        <li class="nav-item">
+            <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
+        </li>
 
-                    <li class="nav-item">
-                        <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
-                    </li>
+        <li class="nav-item">
+            <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
+        </li>
 
-                    <li class="nav-item">
-                        <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
-                    </li>
+        <li class="nav-item">
+            <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
+        </li>
+       
+        <li class="nav-item">
+            <a href="landing.php#contact" class="nav-link">CONTACT</a>
+        </li>
+    </ul>
+</div>
 
-                    <li class="nav-item">
-                        <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
-                    </li>
-                   
-                    <li class="nav-item">
-                        <a href="landing.php#contact" class="nav-link">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
+<div class="navbar-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="login.php" class="nav-link">ADMIN</a>
+        </li>
+    </ul>
+</div>
 
-            <div class="navbar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="login.php" class="nav-link">ADMIN</a>
-                    </li>
-                </ul>
-            </div>
+<!--Navbar Offcanvas-->
 
-            <!--Navbar Offcanvas-->
+<div class="offcanvas offcanvas-end" id="navbar-offcanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="landing.php#home" class="nav-link">HOME</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
+            </li>
 
-            <div class="offcanvas offcanvas-end" id="navbar-offcanvas">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title">Menu</h5>
-                    <button class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="landing.php#home" class="nav-link">HOME</a>
-                        </li>
-                    
-                        <li class="nav-item">
-                            <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                        </li>
+           
+            <li class="nav-item">
+                    <a href="objective.php" class="nav-link">OBJECTIVES</a>
+            </li>
+            <li class="nav-item">
+                    <a href="core.php" class="nav-link">CORE VALUES</a>
+            </li>
+            <li class="nav-item">
+                    <a href="history.php" class="nav-link">HISTORY LOGO</a>
+            </li>
 
-                       
-                        <li class="nav-item">
-                                <a href="objective.php" class="nav-link">OBJECTIVES</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="college-form.php" class="nav-link">COLLEGE E-FORM</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="core.php" class="nav-link">CORE VALUES</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="highschool-form.php" class="nav-link">HIGHSCHOOL E-FORM</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="history.php" class="nav-link">HISTORY LOGO</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="elem-form.php" class="nav-link">ELEMENTARY E-FORM</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="enrollment-form.php" class="nav-link">ENROLLMENT E-FORM</a>
-                        </li>
+            <li class="nav-item">
+                    <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
+            </li>
+     
+            
+            <li class="nav-item">
+                <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
+            </li>
 
-                        <li class="nav-item">
-                                <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
-                        </li>
-                        
-                        
-                        <li class="nav-item">
-                            <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
-                        </li>
+            <li class="nav-item">
+                <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
+            </li>
 
-                        <li class="nav-item">
-                            <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
-                        </li>
+            <li class="nav-item">
+                <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="landing.php#contact" class="nav-link">CONTACT</a>
+            </li>
+            <li class="nav-item">
+                <a href="login.php" class="nav-link">Login as Admin</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-                        <li class="nav-item">
-                            <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
-                        </li>
-                    
-                        <li class="nav-item">
-                            <a href="landing.php#contact" class="nav-link">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="login.php" class="nav-link">Login as Admin</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+</div>
         
 
         <!--other process-->
