@@ -260,8 +260,14 @@ $result_announcements = $conn->query($sql_announcements);
                     <a href="elem-form.php" class="dropdown-item">ELEMENTARY E-FORM</a>
                 </li>
                 <li>
-                    <a href="other-process.php" class="dropdown-item">OTHER PROCESS</a>
-                </li>
+                                <a href="enrollment-procedure.php" class="dropdown-item">ENROLLMENT PROCEDURE</a>
+                            </li>
+                            <li>
+                                <a href="releasing-billing.php" class="dropdown-item">RELEASING OF BILLING</a>
+                            </li>
+                            <li>
+                                <a href="good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
+                            </li>
             </ul>
         </li>
 
@@ -332,8 +338,14 @@ $result_announcements = $conn->query($sql_announcements);
             </li>
 
             <li class="nav-item">
-                    <a href="other-process.php" class="nav-link">OTHER SERVICES</a>
-            </li>
+                                <a href="enrollment-procedure.php" class="nav-link">ENROLLMENT PROCEDURE</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="releasing-billing.php" class="nav-link">RELEASING OF BILLING</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="good-moral.php" class="nav-link">RELEASING OF GOOD MORAL</a>
+                        </li>
      
             
             <li class="nav-item">

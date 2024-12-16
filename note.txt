@@ -1,0 +1,54 @@
+   <div class="box bg-light rounded-3 shadow p-3 m-3" style="width: 400px; min-height: 35rem">
+                <header class="d-flex justify-content-center align-items-center">
+                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                    <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                        <label>Moldero St., Purok 5, Bulanao</label> <br>
+                        <label>Tabuk City, Kalinga 3800</label> <br>
+                    </div>
+                </header>
+                <div class="box-body p-3">
+                    <p class="text-primary">RELEASING OF BILLING</p>
+                    <p style="font-size: 11px;">
+
+                        <strong>A. For Undergraduate Students:</strong> <br>
+
+                            Get a REQUEST SLIP from the Registrar's Office.<br>
+                            Fill up the form correctly.<br>
+                            State the reason for request.<br>
+                            Proceed to cashier for the payment of the requested documents.<br>
+                            Submit the request slip to the registrar's office. (Duration: 3 working days.)<br>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="box bg-light rounded-3 shadow p-3 m-3" style="width: 400px; min-height: 35rem">
+                <header class="d-flex justify-content-center align-items-center">
+                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                    <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
+                    <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
+                        <label>Moldero St., Purok 5, Bulanao</label> <br>
+                        <label>Tabuk City, Kalinga 3800</label> <br>
+                    </div>
+                </header>
+                <div class="box-body p-3">
+                    <p class="text-primary">RELEASING OF GOOD MORAL CERTIFICATE</p>
+                    <p style="font-size: 11px;">
+
+                        <strong>B. For Graduates:</strong><br>
+
+                        Get a REQUEST SLIP from the Registrar's Office.<br>
+                        Fill up the form correctly.<br>
+                        Check your desired documents to be release (Specify the purpose, i.e. For Employment, For PNP Application, Etc)<br>
+                        Be cleared up from your Clearance:<br>
+                        a. Custodian<br>
+                        b. Departmental Dean<br>
+                        c. Registrar<br>
+                        d. Cashier<br>
+                        Submit your Request Slip together with your receipt to the Registrar's Office.<br>
+                        Take your Claim Slip.<br>
+                        After 15 working days, Present to the Registrar's Office your Claim Slip for the release of the requested documents.<br>
+                    </p>
+                </div>
+            </div>
