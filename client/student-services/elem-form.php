@@ -24,7 +24,7 @@ $result_announcements = $conn->query($sql_announcements);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kalinga Colleges of Science and Technology</title>
-    <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../styles.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>  
@@ -211,166 +211,8 @@ $result_announcements = $conn->query($sql_announcements);
 
     <div class="landing">
          <!--Navbar-->
-        <div class="navbar navbar-expand-xl navbar-dark bg-dark d-flex justify-content-between align-items-center">
+         <div id="sectionNav"></div>
 
-<div class="navbar-brand d-flex justify-content-center align-items-center">
-    <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
-    <h1>KCST</h1>
-</div>
-
-<button class="navbar-toggler" data-bs-target="#navbar-offcanvas" data-bs-toggle="offcanvas">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="navbar-nav">
-    <ul class="nav">
-        <li class="nav-item">
-            <a href="index.php#home" class="nav-link">HOME</a>
-        </li>
-    
-        <li class="nav-item">
-            <a href="index.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="objective.php" class="dropdown-item">Objective</a>
-                </li>
-                <li>
-                    <a href="core.php" class="dropdown-item">Core Values</a>
-                </li>
-                <li>
-                    <a href="history.php" class="dropdown-item">History Logo</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="college-form.php" class="dropdown-item">COLLEGE E-FORM</a>
-                </li>
-                <li>
-                    <a href="highschool-form.php" class="dropdown-item">HIGHSCHOOL E-FORM</a>
-                </li>
-                <li>
-                    <a href="elem-form.php" class="dropdown-item">ELEMENTARY E-FORM</a>
-                </li>
-                <li>
-                                <a href="enrollment-procedure.php" class="dropdown-item">ENROLLMENT PROCEDURE</a>
-                            </li>
-                            <li>
-                                <a href="releasing-billing.php" class="dropdown-item">RELEASING OF BILLING</a>
-                            </li>
-                            <li>
-                                <a href="good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
-                            </li>
-            </ul>
-        </li>
-
-        <li class="nav-item">
-            <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
-        </li>
-
-        <li class="nav-item">
-            <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
-        </li>
-
-        <li class="nav-item">
-            <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
-        </li>
-       
-        <li class="nav-item">
-            <a href="landing.php#contact" class="nav-link">CONTACT</a>
-        </li>
-    </ul>
-</div>
-
-<div class="navbar-nav">
-    <ul class="nav">
-        <li class="nav-item">
-            <a href="login.php" class="nav-link">ADMIN</a>
-        </li>
-    </ul>
-</div>
-
-<!--Navbar Offcanvas-->
-
-<div class="offcanvas offcanvas-end" id="navbar-offcanvas">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Menu</h5>
-        <button class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a href="landing.php#home" class="nav-link">HOME</a>
-            </li>
-        
-            <li class="nav-item">
-                <a href="landing.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-            </li>
-
-           
-            <li class="nav-item">
-                    <a href="objective.php" class="nav-link">OBJECTIVES</a>
-            </li>
-            <li class="nav-item">
-                    <a href="core.php" class="nav-link">CORE VALUES</a>
-            </li>
-            <li class="nav-item">
-                    <a href="history.php" class="nav-link">HISTORY LOGO</a>
-            </li>
-
-            <li class="nav-item">
-                    <a href="college-form.php" class="nav-link">COLLEGE E-FORM</a>
-            </li>
-
-            <li class="nav-item">
-                    <a href="highschool-form.php" class="nav-link">HIGHSCHOOL E-FORM</a>
-            </li>
-
-            <li class="nav-item">
-                    <a href="elem-form.php" class="nav-link">ELEMENTARY E-FORM</a>
-            </li>
-
-            <li class="nav-item">
-                                <a href="enrollment-procedure.php" class="nav-link">ENROLLMENT PROCEDURE</a>
-                        </li>
-                        <li class="nav-item">
-                                <a href="releasing-billing.php" class="nav-link">RELEASING OF BILLING</a>
-                        </li>
-                        <li class="nav-item">
-                                <a href="good-moral.php" class="nav-link">RELEASING OF GOOD MORAL</a>
-                        </li>
-     
-            
-            <li class="nav-item">
-                <a href="landing.php#carouselExample" class="nav-link">GALLERY</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="landing.php#programs" class="nav-link">PROGRAMS</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="landing.php#updates" class="nav-link">CAMPUS UPDATES</a>
-            </li>
-        
-            <li class="nav-item">
-                <a href="landing.php#contact" class="nav-link">CONTACT</a>
-            </li>
-            <li class="nav-item">
-                <a href="login.php" class="nav-link">Login as Admin</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-</div>
         
 
         <!--elem process-->
@@ -1047,8 +889,9 @@ $result_announcements = $conn->query($sql_announcements);
         
     </script>
 
-    <script src="html2canvas.js"></script>
-    <script src="faqs.js"></script>
+    <script src="../../html2canvas.js"></script>
+    <script src="../../faqs.js"></script>
+    <script src="../layout/sectionNav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -150,7 +150,7 @@ $result_announcements = $conn->query($sql_announcements);
     <div class="container-fluid vh-100 d-flex justify-content-center align-items-center" id="objective">
         <div class="container d-flex mt-5" style="height: auto; width: 50rem;" id="objective-content">
             <div class="box bg-light rounded-3 p-3 d-flex justify-content-center align-items-center shadow" style="flex: 1;">
-                <img src="./asset/img/objective.png" class="img-fluid" style="width: 200px" alt="">
+                <img src="../../asset/img/objective.png" class="img-fluid" style="width: 200px" alt="">
             </div>
             <div class="box p-3 d-flex justify-content-center align-items-start flex-column text-light" style="flex: 1;">
                 <h1 class="text-center">Objective</h1>
@@ -210,8 +210,8 @@ $result_announcements = $conn->query($sql_announcements);
         });
         
     </script>
-    <script src="faqs.js"></script>
-    <script src="../includes/sectionNav.js"></script>
+    <script src="../../faqs.js"></script>
+    <script src="../layout/sectionNav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
