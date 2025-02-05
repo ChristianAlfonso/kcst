@@ -27,19 +27,19 @@ if (mainNav) {
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="objective.php" class="dropdown-item">Objective</a>
+                                <a href="./about/objective.php" class="dropdown-item">Objective</a>
                             </li>
                             <li>
-                                <a href="core.php" class="dropdown-item">Core Values</a>
+                                <a href="./about/core.php" class="dropdown-item">Core Values</a>
                             </li>
                             <li>
                                 <a href="" class="dropdown-item">Organizational Structure</a>
                             </li>
                             <li>
-                                <a href="history.php" class="dropdown-item">History Logo</a>
+                                <a href="./about/history.php" class="dropdown-item">History Logo</a>
                             </li>
                             <li>
-                                <a href="history.php" class="dropdown-item">School History</a>
+                                <a href="./about/history.php" class="dropdown-item">School History</a>
                             </li>
                         </ul>
                     </li>
@@ -55,17 +55,17 @@ if (mainNav) {
                             </li>
                     
                             <li>
-                                <a href="weather-update.php" class="dropdown-item">Weather Updates</a>
+                                <a href="./student-services/weather-update.php" class="dropdown-item">Weather Updates</a>
                             </li>
                            
                             <li>
-                                <a href="enrollment-procedure.php" class="dropdown-item">ENROLLMENT PROCEDURE</a>
+                                <a href="./student-services/enrollment-procedure.php" class="dropdown-item">ENROLLMENT PROCEDURE</a>
                             </li>
                             <li>
-                                <a href="releasing-billing.php" class="dropdown-item">RELEASING OF BILLING</a>
+                                <a href="./student-services/releasing-billing.php" class="dropdown-item">RELEASING OF BILLING</a>
                             </li>
                             <li>
-                                <a href="good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
+                                <a href="./student-services/good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
                             </li>
                         </ul>
                     </li>
@@ -78,25 +78,25 @@ if (mainNav) {
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">PROGRAMS</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="program-basic-educ.php" class="dropdown-item">Basic Education</a>
+                                <a href="./programs/program-basic-educ.php" class="dropdown-item">Basic Education</a>
                             </li>
                             <li>
-                                <a href="program-junior-highschool.php" class="dropdown-item">Junior & High School</a>
+                                <a href="./programs/program-junior-highschool.php" class="dropdown-item">Junior & High School</a>
                             </li>
                             <li>
-                                <a href="program-bsit.php" class="dropdown-item">Bs Information Technology</a>
+                                <a href="./programs/program-bsit.php" class="dropdown-item">Bs Information Technology</a>
                             </li>
                             <li>
-                                <a href="program-ce.php" class="dropdown-item">Bs Computer Engineering</a>
+                                <a href="./programs/program-ce.php" class="dropdown-item">Bs Computer Engineering</a>
                             </li>
                             <li>
-                                <a href="program-crim.php" class="dropdown-item">Bs Criminology</a>
+                                <a href="./programs/program-crim.php" class="dropdown-item">Bs Criminology</a>
                             </li>
                             <li>
-                                <a href="program-hospitality.php" class="dropdown-item">Bs Hospitality Management</a>
+                                <a href="./programs/program-hospitality.php" class="dropdown-item">Bs Hospitality Management</a>
                             </li>
                             <li>
-                                <a href="program-basic-educ.php" class="dropdown-item">Bs Education</a>
+                                <a href="./programs/program-basic-educ.php" class="dropdown-item">Bs Education</a>
                             </li>
                         </ul>
                     </li>
@@ -131,19 +131,19 @@ if (mainNav) {
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="objective.php" class="dropdown-item">Objective</a>
+                                <a href="./about/objective.php" class="dropdown-item">Objective</a>
                             </li>
                             <li>
-                                <a href="core.php" class="dropdown-item">Core Values</a>
+                                <a href="./about/core.php" class="dropdown-item">Core Values</a>
                             </li>
                             <li>
                                 <a href="" class="dropdown-item">Organizational Structure</a>
                             </li>
                             <li>
-                                <a href="history.php" class="dropdown-item">History Logo</a>
+                                <a href="./about/history.php" class="dropdown-item">History Logo</a>
                             </li>
                             <li>
-                                <a href="history.php" class="dropdown-item">School History</a>
+                                <a href="./about/history.php" class="dropdown-item">School History</a>
                             </li>
                         </ul>
                     </li>
@@ -182,25 +182,25 @@ if (mainNav) {
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">PROGRAMS</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="program-basic-educ.php" class="dropdown-item">Basic Education</a>
+                                <a href="./programs/program-basic-educ.php" class="dropdown-item">Basic Education</a>
                             </li>
                             <li>
-                                <a href="program-junior-highschool.php" class="dropdown-item">Junior & High School</a>
+                                <a href="./programs/program-junior-highschool.php" class="dropdown-item">Junior & High School</a>
                             </li>
                             <li>
-                                <a href="program-bsit.php" class="dropdown-item">Bs Information Technology</a>
+                                <a href="./programs/program-bsit.php" class="dropdown-item">Bs Information Technology</a>
                             </li>
                             <li>
-                                <a href="program-ce.php" class="dropdown-item">Bs Computer Engineering</a>
+                                <a href="./programs/program-ce.php" class="dropdown-item">Bs Computer Engineering</a>
                             </li>
                             <li>
-                                <a href="program-crim.php" class="dropdown-item">Bs Criminology</a>
+                                <a href="./programs/program-crim.php" class="dropdown-item">Bs Criminology</a>
                             </li>
                             <li>
-                                <a href="program-hospitality.php" class="dropdown-item">Bs Hospitality Management</a>
+                                <a href="./programs/program-hospitality.php" class="dropdown-item">Bs Hospitality Management</a>
                             </li>
                             <li>
-                                <a href="program-basic-educ.php" class="dropdown-item">Bs Education</a>
+                                <a href="./programs/program-basic-educ.php" class="dropdown-item">Bs Education</a>
                             </li>
                         </ul>
                     </li>
