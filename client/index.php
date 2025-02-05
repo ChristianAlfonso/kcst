@@ -40,7 +40,7 @@ $onlineLinks = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalinga Colleges of Science and Technology</title>
-    <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../client/styles.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>  
         .mapa iframe {
@@ -179,171 +179,7 @@ $onlineLinks = [
 
     <div class="landing">
         <!--Navbar-->
-        <div class="navbar navbar-expand-xl navbar-dark fixed-top d-flex justify-content-between align-items-center">
-
-            <div class="navbar-brand d-flex justify-content-center align-items-center">
-                <img src="./asset/img/kcst1.png" alt="logo" class="img-fluid">
-                <h1>KCST</h1>
-            </div>
-
-            <button class="navbar-toggler" data-bs-target="#navbar-offcanvas" data-bs-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">HOME</a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <a href="#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="objective.php" class="dropdown-item">Objective</a>
-                            </li>
-                            <li>
-                                <a href="core.php" class="dropdown-item">Core Values</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">Organizational Structure</a>
-                            </li>
-                            <li>
-                                <a href="history.php" class="dropdown-item">History Logo</a>
-                            </li>
-                            <li>
-                                <a href="history.php" class="dropdown-item">School History</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="" class="dropdown-item">School Announcement</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">School Events</a>
-                            </li>
-                    
-                            <li>
-                                <a href="weather-update.php" class="dropdown-item">Weather Updates</a>
-                            </li>
-                           
-                            <li>
-                                <a href="enrollment-procedure.php" class="dropdown-item">ENROLLMENT PROCEDURE</a>
-                            </li>
-                            <li>
-                                <a href="releasing-billing.php" class="dropdown-item">RELEASING OF BILLING</a>
-                            </li>
-                            <li>
-                                <a href="good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#carouselExample" class="nav-link">GALLERY</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">PROGRAMS</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="" class="dropdown-item">Basic Education</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">Junior & High School</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">Bs Information Technology</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">Bs Computer Engineering</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">Bs Criminology</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">Bs Hospitality Management</a>
-                            </li>
-                            <li>
-                                <a href="" class="dropdown-item">Bs Education</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    
-                   
-                   
-            </div>
-
-            <div class="navbar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="login.php" class="nav-link">ADMIN</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!--Navbar Offcanvas-->
-
-            <div class="offcanvas offcanvas-end" id="navbar-offcanvas">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title">Menu</h5>
-                    <button class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link">HOME</a>
-                        </li>
-                    
-                        <li class="nav-item">
-                            <a href="#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                        </li>
-
-                       
-                        <li class="nav-item">
-                                <a href="objective.php" class="nav-link">OBJECTIVES</a>
-                        </li>
-                        <li class="nav-item">
-                                <a href="core.php" class="nav-link">CORE VALUES</a>
-                        </li>
-                        <li class="nav-item">
-                                <a href="history.php" class="nav-link">HISTORY LOGO</a>
-                        </li>
-                        
-
-                        <li class="nav-item">
-                            <a href="#carouselExample" class="nav-link">GALLERY</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#programs" class="nav-link">PROGRAMS</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#updates" class="nav-link">CAMPUS UPDATES</a>
-                        </li>
-                    
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="login.php" class="nav-link">Login as Admin</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+        <div id="mainNav"></div>
         
         <!--Main Content-->
         <div class="main-content p-3 d-flex justify-content-center align-items-center flex-column text-white text-center" id="home">
@@ -389,7 +225,7 @@ $onlineLinks = [
             <div class="about-body d-flex justify-content-center align-items-center w-100 m-5">
                 <div class="box d-flex justify-content-center align-items-center border rounded-3 flex-column p-5 shadow-sm">
                         <div class="box-header">
-                            <img src="./asset/img/troph-cap.png" alt="" class="img-fluid">
+                            <img src="./../asset/img/troph-cap.png" alt="" class="img-fluid">
                         </div>
                         <div class="box-content mt-5 text-center">
                             Incomparable value-for-money for the high quality of education provided.
@@ -397,7 +233,7 @@ $onlineLinks = [
                 </div>
                 <div class="box d-flex justify-content-center align-items-center border rounded-3 flex-column p-5 shadow-sm">
                         <div class="box-header">
-                            <img src="./asset/img/handling-coin.png" alt="" class="img-fluid">
+                            <img src="./../asset/img/handling-coin.png" alt="" class="img-fluid">
                         </div>
                         <div class="box-content mt-5 text-center">
                             Affordable fees and flexible Tuition Payment Terms.
@@ -405,7 +241,7 @@ $onlineLinks = [
                 </div>
                 <div class="box d-flex justify-content-center align-items-center border rounded-3 flex-column p-5 shadow-sm">
                         <div class="box-header">
-                            <img src="./asset/img/wallet-income.png" alt="" class="img-fluid">
+                            <img src="./../asset/img/wallet-income.png" alt="" class="img-fluid">
                         </div>
                         <div class="box-content mt-5 text-center">
                             Multiple options on flexible payment terms and financial aid. 
@@ -430,19 +266,19 @@ $onlineLinks = [
                     <!-- The slideshow/carousel -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./asset/img/display1.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
+                            <img src="./../asset/img/display1.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
                             <div class="carousel-caption">
                                 <h3>Open Grounds</h3>
                             </div>
                         </div>
                         <div class="carousel-item">            
-                            <img src="./asset/img/display2.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
+                            <img src="./../asset/img/display2.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
                             <div class="carousel-caption">
                                 <h3>Computer Laboratory</h3>
                             </div> 
                         </div>
                         <div class="carousel-item">
-                            <img src="./asset/img/display4.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
+                            <img src="./../asset/img/display4.png" class="d-block img-fluid" style="width: 100vw; height: 70vh;">
                             <div class="carousel-caption">
                                 <h3>Admin Office</h3>
                             </div>  
@@ -634,7 +470,7 @@ $onlineLinks = [
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="./asset/img/basic-educ.jpg" 
+                    <img src="./../asset/img/basic-educ.jpg" 
                          class="img-fluid mb-2 rounded-3 vw-100" 
                          alt=""
                          style="max-height:400px">
@@ -661,7 +497,7 @@ $onlineLinks = [
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="./asset/img/senior-high.jpg" 
+                    <img src="./../asset/img/senior-high.jpg" 
                          class="img-fluid mb-2 rounded-3 vw-100" 
                          alt=""
                          style="max-height:400px">
@@ -688,7 +524,7 @@ $onlineLinks = [
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="./asset/img/bsit.jpg" 
+                    <img src="./../asset/img/bsit.jpg" 
                          class="img-fluid mb-2 rounded-3 vw-100" 
                          alt=""
                          style="max-height:400px">
@@ -715,7 +551,7 @@ $onlineLinks = [
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="./asset/img/crim.jpg" 
+                    <img src="./../asset/img/crim.jpg" 
                          class="img-fluid mb-2 vw-100 rounded-3" 
                          alt="" 
                          style="max-height:400px">
@@ -742,7 +578,7 @@ $onlineLinks = [
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="./asset/img/bsce.jpg" 
+                    <img src="./../asset/img/bsce.jpg" 
                          class="img-fluid mb-2 vw-100 rounded-3" 
                          alt="" 
                          style="max-height:400px;">
@@ -769,7 +605,7 @@ $onlineLinks = [
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="./asset/img/bshm.jpg" 
+                    <img src="./../asset/img/bshm.jpg" 
                          class="img-fluid vw-100 mb-2 rounded-3" 
                          alt="" 
                          style="max-height: 400px;">
@@ -796,7 +632,7 @@ $onlineLinks = [
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="./asset/img/educ.jpg" 
+                    <img src="./../asset/img/educ.jpg" 
                          class="img-fluid vw-100 mb-2 rounded-3" 
                          alt="" 
                          style="max-height: 400px;">
@@ -851,6 +687,7 @@ $onlineLinks = [
         
     </script>
     <script src="faqs.js"></script>
+    <script src="../includes/mainNav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
