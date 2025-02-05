@@ -557,7 +557,7 @@ $result_announcements = $conn->query($sql_announcements);
                                 </table>
                             </div>
 
-                            <div style="" class="p-3">
+                            <div class="p-3">
                                 <table class="table table-borderless table-equal" >
                                     <tr>
                                         <th>Accounting's Copy</th>
@@ -842,7 +842,7 @@ $result_announcements = $conn->query($sql_announcements);
                 <table>
                     <tr>
                         <td>
-                            <table class="table table-borderless table-equal" id="table-back" style="font-size: 12px; border:">
+                            <table class="table table-borderless table-equal" id="table-back" style="font-size: 12px;">
                                 <tr>
                                     <td>Home Address: <span contenteditable="true">_______  </span></td>
                                 </tr>
