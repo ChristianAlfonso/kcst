@@ -66,6 +66,15 @@ if (sectionNav) {
                                 <li>
                                     <a href="../student-services/good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
                                 </li>
+                                <li>
+                                    <a href="../student-services/college-form.php" class="dropdown-item">COLLEGE FORM</a>
+                                </li>
+                                <li>
+                                    <a href="../student-services/highschool-form.php" class="dropdown-item">HIGHSCHOOL FORM</a>
+                                </li>
+                                <li>
+                                    <a href="../student-services/elem-form.php" class="dropdown-item">ELEMENTARY FORM</a>
+                                </li>
                             </ul>
                         </li>
     
@@ -169,6 +178,15 @@ if (sectionNav) {
                                 </li>
                                 <li>
                                     <a href="../student-services/good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
+                                </li>
+                                 <li>
+                                    <a href="../student-services/college-form.php" class="dropdown-item">COLLEGE FORM</a>
+                                </li>
+                                <li>
+                                    <a href="../student-services/highschool-form.php" class="dropdown-item">HIGHSCHOOL FORM</a>
+                                </li>
+                                <li>
+                                    <a href="../student-services/elem-form.php" class="dropdown-item">ELEMENTARY FORM</a>
                                 </li>
                             </ul>
                         </li>

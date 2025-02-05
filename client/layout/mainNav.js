@@ -67,6 +67,15 @@ if (mainNav) {
                             <li>
                                 <a href="./student-services/good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
                             </li>
+                             <li>
+                                    <a href="./student-services/college-form.php" class="dropdown-item">COLLEGE FORM</a>
+                                </li>
+                                <li>
+                                    <a href="./student-services/highschool-form.php" class="dropdown-item">HIGHSCHOOL FORM</a>
+                                </li>
+                                <li>
+                                    <a href="./student-services/elem-form.php" class="dropdown-item">ELEMENTARY FORM</a>
+                                </li>
                         </ul>
                     </li>
 
@@ -159,18 +168,27 @@ if (mainNav) {
                             </li>
                     
                             <li>
-                                <a href="weather-update.php" class="dropdown-item">Weather Updates</a>
+                                <a href="./student-services/weather-update.php" class="dropdown-item">Weather Updates</a>
                             </li>
                            
                             <li>
-                                <a href="enrollment-procedure.php" class="dropdown-item">ENROLLMENT PROCEDURE</a>
+                                <a href="./student-services/enrollment-procedure.php" class="dropdown-item">ENROLLMENT PROCEDURE</a>
                             </li>
                             <li>
-                                <a href="releasing-billing.php" class="dropdown-item">RELEASING OF BILLING</a>
+                                <a href="./student-services/releasing-billing.php" class="dropdown-item">RELEASING OF BILLING</a>
                             </li>
                             <li>
-                                <a href="good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
+                                <a href="./student-services/good-moral.php" class="dropdown-item">RELEASING OF GOOD MORAL</a>
                             </li>
+                             <li>
+                                    <a href="./student-services/college-form.php" class="dropdown-item">COLLEGE FORM</a>
+                                </li>
+                                <li>
+                                    <a href="./student-services/highschool-form.php" class="dropdown-item">HIGHSCHOOL FORM</a>
+                                </li>
+                                <li>
+                                    <a href="./student-services/elem-form.php" class="dropdown-item">ELEMENTARY FORM</a>
+                                </li>
                         </ul>
                     </li>
 

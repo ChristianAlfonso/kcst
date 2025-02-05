@@ -32,7 +32,7 @@ $result_announcements = $conn->query($sql_announcements);
             min-width: 30cm;
             overflow-x: auto !important;
             font-family: Arial, sans-serif;
-            background-image: url('./asset/img/blur-bg.png');
+            background-image: url('../../asset/img/blur-bg.png');
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -229,7 +229,7 @@ $result_announcements = $conn->query($sql_announcements);
                         <tr>
                             <td colspan="5">
                                 <header class="d-flex justify-content-center align-items-center">
-                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <img src="../../asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
                                     <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
                                         <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
                                         <label>Moldero St., Purok 5, Bulanao</lab> <br>
@@ -343,7 +343,7 @@ $result_announcements = $conn->query($sql_announcements);
                         <tr>
                             <td colspan="5">
                                 <header class="d-flex justify-content-center align-items-center">
-                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <img src="../../asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
                                     <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
                                         <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
                                         <label>Moldero St., Purok 5, Bulanao</lab> <br>
@@ -456,7 +456,7 @@ $result_announcements = $conn->query($sql_announcements);
                         <tr>
                             <td colspan="5">
                                 <header class="d-flex justify-content-center align-items-center">
-                                    <img src="./asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
+                                    <img src="../../asset/img/kcst1.png" class="img-fluid p-3" style="width: 60px;" alt="">
                                     <div class="header-title text-center" style="font-size: 9px; font-weight: bold;">
                                         <label>KALINGA COLLEGES OF SCIENCE AND TECHNOLOGY INC.</label> <br>
                                         <label>Moldero St., Purok 5, Bulanao</lab> <br>
