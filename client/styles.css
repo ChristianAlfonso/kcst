@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Lexend;
+}
+
+.navbar {
+    padding: 2%;
+    font-size: 0.8rem;
+}
+
+/*Login Page*/
+.label-group {
+    font-size: 0.8rem;
+}
+
+.login-page {
+    background: url(asset/img/blur-bg.png) no-repeat center / cover;
+}
+
+.login-page .login-form {
+    width: 500px;
+    border: 1px solid #808131;
+}
+
+.login-page .login-form .login-header .login-title img {
+    width: 25px;
+}
+
+.login-page .login-form .login-body input[type="submit"]:hover {
+    background-color: #272715 !important;
+}
+
+/*Landing Page*/
+.navbar {
+    transition: background-color 0.5s ease;
+}
+
+.navbar .navbar-brand {
+    gap: 5px;
+}
+
+.navbar .navbar-brand img {
+    width: 30px;
+}
+
+.main-content {
+    position: relative;
+    background: url(./asset/hero-bg.jpg) no-repeat center / cover fixed;
+    height: 80vh;
+}
+
+.about .about-body {
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about .about-body .box {
+    width: 400px;
+    height: 300px;
+}
+
+.about .about-body .box img {
+    aspect-ratio: 1/1;
+    width: 50px;
+}
+
+.value .box {
+    min-height: 60vh;
+    flex: 1;
+}
+
+
+.value .box:nth-child(1) {
+    background: url(./asset/img/kcst-hero.png) no-repeat center / cover;
+}
+
+.program {
+    transition: all 0.6 ease;
+}
+
+
+
+
+.program .program-body {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.program .program-body .box {
+    width: 400px;
+    min-height: 400px;
+}
+
+.program .program-body .box:nth-child(1) {
+    background: url(./asset/img/basic-educ.jpg) no-repeat center / cover;
+    color: white;
+}
+
+.program .program-body .box:nth-child(2) {
+    background: url(./asset/img/senior-high.jpg) no-repeat center / cover;
+    color: white;
+}
+
+.program .program-body .box:nth-child(3) {
+    background: url(./asset/img/bsit.jpg) no-repeat center / cover;
+    color: white;
+}
+
+.program .program-body .box:nth-child(4) {
+    background: url(./asset/img/crim.jpg) no-repeat center / cover;
+    color: white;
+}
+
+.program .program-body .box:nth-child(5) {
+    background: url(./asset/img/bsce.jpg) no-repeat center / cover;
+    color: white;
+}
+
+.program .program-body .box:nth-child(6) {
+    background: url(./asset/img/bshm.jpg) no-repeat center / cover;
+    color: white;
+}
+
+.program .program-body .box:nth-child(7) {
+    background: url(./asset/img/educ.jpg) no-repeat center / cover;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .value .box:nth-child(1) {
+        display: none;
+    }
+
+    .value .box:nth-child(2) {
+        padding: 20px !important;
+    }
+
+    .mapa iframe {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-nav {
+        display: none !important;
+    }
+
+    .offcanvas .offcanvas-body ul li a {
+        color: black;
+    }
+    .offcanvas .offcanvas-body ul li a:hover {
+        background-color: #212529;
+        color: whitesmoke;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .mapa iframe {
+        width: 100% !important;
+    }
+    
+    #objective-content {
+        flex-direction: column;
+    }
+
+    
+
+}
+
+.updates {
+    background: url(./asset/img/announcement.png) no-repeat bottom left / clamp(5rem, 15vw, 20rem);}
+
+.updates .box {
+    flex: 1;
+}
+
+/* animation */
+#demo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* When a specific class is added, fade up the container */
+#demo.fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}   
+
+
+#objective {
+    background: url(./asset/img/blur-bg.png) no-repeat center / cover;
+}
+
+
+#other-process 
+{
+    background: url(./asset/img/blur-bg.png) no-repeat center / cover;
+}
