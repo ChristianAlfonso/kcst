@@ -27,6 +27,9 @@ $result_announcements = $conn->query($sql_announcements);
     <link rel="stylesheet" href="../styles.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <script src="../layout/animation.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
     <style>  
         .mapa iframe {
             width: 70%;
@@ -151,9 +154,9 @@ $result_announcements = $conn->query($sql_announcements);
         <div class="container-fluid d-flex justify-content-center align-items-center p-3 text-white" style="min-height: 100vh" id="objective">
             <div class="container-fluid mt-5">
                 <div class="img-group d-flex justify-content-center" style="flex-wrap: wrap; gap: 1rem">
-                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" alt="">
-                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" alt="">
-                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" alt="">
+                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" id="img-animated" alt="">
+                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" id="img-animated" alt="">
+                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" id="img-animated" alt="">
                 </div>
                 <div class="img-title container"> 
                     <h2 class="text-center mt-2">JUNIOR & SENIOR HIGHSCHOOL</h2>

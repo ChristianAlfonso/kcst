@@ -26,6 +26,10 @@ $result_announcements = $conn->query($sql_announcements);
     <title>Kalinga Colleges of Science and Technology</title>
     <link rel="stylesheet" href="../styles.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="../layout/animation.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
     <style>  
         .mapa iframe {
             width: 70%;
@@ -143,10 +147,10 @@ $result_announcements = $conn->query($sql_announcements);
 
         <div class="container-fluid d-flex justify-content-center align-items-center" id="objective" style="min-height: 100vh">
         <div class="container d-flex" style="height: auto; width: 50rem; margin-top: 5rem" id="objective-content">
-            <div class="box bg-light rounded-3 d-flex justify-content-center align-items-center shadow" style="flex: 1;">
+            <div class="box bg-light rounded-3 d-flex justify-content-center align-items-center shadow" style="flex: 1;" id="img-animated">
                 <img src="../../asset/img/kcst1.png" class="img-fluid" style="width: 200px" alt="">
             </div>
-            <div class="box p-3 d-flex justify-content-center align-items-start flex-column text-light" style="flex: 1;">
+            <div class="img-title box p-3 d-flex justify-content-center align-items-start flex-column text-light" style="flex: 1;">
                 <h1>History Of KCST Logo</h1>
                 <p class="text-justify">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, dolore? Earum reprehenderit culpa quae corrupti veniam excepturi odit quasi ipsa animi sit aperiam nam ratione recusandae, eos illum error ipsam?</p>

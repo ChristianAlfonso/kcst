@@ -30,6 +30,7 @@ $result_announcements = $conn->query($sql_announcements);
     <script src="../layout/animation.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
+
     <style>  
         .mapa iframe {
             width: 70%;
@@ -136,46 +137,29 @@ $result_announcements = $conn->query($sql_announcements);
             opacity: 1;
             transform: translateY(0);
         }
-
-        .img-group img {
-            width: clamp(300px, 30%, 400px);
-            height: clamp(150px, 20%, 300px);
-        }
     </style>
 </head>
 <body>
 
     <div class="landing">
         <!--Navbar-->
-       
         <div id="sectionNav"></div>
-      
+        
 
-        <div class="container-fluid d-flex justify-content-center align-items-center p-3 text-white" style="min-height: 100vh" id="objective">
-            <div class="container-fluid mt-5">
-                <div class="img-group d-flex justify-content-center" style="flex-wrap: wrap; gap: 1rem">
-                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" id="img-animated" alt="">
-                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" id="img-animated" alt="">
-                    <img src="../../asset/img/senior-high.jpg" class="img-fluid rounded-3" id="img-animated" alt="">
-                </div>
-                <div class="img-title container"> 
-                    <h2 class="text-center mt-2">BS EDUCATION</h2>
-                    <p>The BSEd program prepares students for careers in teaching by providing them with the knowledge, skills, and strategies needed for effective education. It covers pedagogy, curriculum development, classroom management, and subject specialization in areas such as English, Mathematics, Science, and Social Studies. The program emphasizes practical teaching experience and professional development, equipping graduates to become competent educators in primary, secondary, or higher education institutions.</p>
-                    <ul>
-                        <li>Original Grade 12 Senior High School Report Card (F-138)</li>
-                        <li>Original F137 (with request letter from KCST)</li>
-                        <li>Original Certificate of Good Moral Character issued in the current year</li>
-                        <li>Two (2) identical copies of recent 2”x2” studio photo (white background)</li>
-                        <li>Clear photocopy of PSA Birth Certificate;</li>
-                        <li>For married female applicants, a clear photocopy of Marriage Certificate</li>
-                        <li>Clear photocopy of Grade 12 Senior High School Diploma</li>
-                    </ul>
-                </div>
-                
+        <div class="container-fluid d-flex justify-content-center align-items-center" id="objective" style="min-height: 100vh">
+        <div class="container d-flex" style="height: auto; width: 50rem; margin-top: 5rem" id="objective-content">
+                <img src="../../asset/img/display3.jpg" class="img-fluid" style="width: 400px" alt="" id="img-animated">
+            <div class="img-title box p-3 d-flex justify-content-center align-items-start flex-column text-light" style="flex: 1;">
+                <h1>School History</h1>
+                <p class="text-justify">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, dolore? Earum reprehenderit culpa quae corrupti veniam excepturi odit quasi ipsa animi sit aperiam nam ratione recusandae, eos illum error ipsam?</p>
             </div>
         </div>
-        
     </div>
+      
+
+                   
+     
     
 
     
@@ -231,6 +215,5 @@ $result_announcements = $conn->query($sql_announcements);
     <script src="../../faqs.js"></script>
     <script src="../layout/sectionNav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
 </body>
 </html>

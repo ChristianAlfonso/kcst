@@ -27,6 +27,9 @@ $result_announcements = $conn->query($sql_announcements);
     <link rel="stylesheet" href="../styles.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <script src="../layout/animation.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
     <style>  
         .mapa iframe {
             width: 70%;
@@ -145,10 +148,10 @@ $result_announcements = $conn->query($sql_announcements);
 
         <div class="container-fluid vh-100 d-flex justify-content-center align-items-center" id="objective">
         <div class="container d-flex mt-5" style="height: auto; width: 50rem;" id="objective-content">
-            <div class="box bg-light rounded-3 p-3 d-flex justify-content-center align-items-center shadow" style="flex: 1;">
+            <div class="box bg-light rounded-3 p-3 d-flex justify-content-center align-items-center shadow" style="flex: 1;" id="img-animated">
                 <img src="../../asset/img/core-value.png" class="img-fluid" style="width: 200px" alt="">
             </div>
-            <div class="box p-3 d-flex justify-content-center align-items-start flex-column text-light" style="flex: 1;">
+            <div class="img-title box p-3 d-flex justify-content-center align-items-start flex-column text-light" style="flex: 1;">
                 <h1 class="text-center">Core Values</h1>
                 <p class="text-justify">
                 To Maintain its vision and mision, KCST shall inculate and promote the internalization of values founded on equality of opportunity, social justice, social awareness and understanding of a dynamic Filipino in thoughts, words, and deeds.

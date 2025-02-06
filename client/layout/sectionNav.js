@@ -18,9 +18,7 @@ if (sectionNav) {
                             <a href="../index.php" class="nav-link">HOME</a>
                         </li>
                     
-                        <li class="nav-item">
-                            <a href="../index.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                        </li>
+                        
     
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
@@ -38,7 +36,7 @@ if (sectionNav) {
                                     <a href="../about/history.php" class="dropdown-item">History Logo</a>
                                 </li>
                                 <li>
-                                    <a href="../about/history.php" class="dropdown-item">School History</a>
+                                    <a href="../about/school-history.php" class="dropdown-item">School History</a>
                                 </li>
                             </ul>
                         </li>
@@ -78,9 +76,7 @@ if (sectionNav) {
                             </ul>
                         </li>
     
-                        <li class="nav-item">
-                            <a href="index.php#carouselExample" class="nav-link">GALLERY</a>
-                        </li>
+                        
     
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">PROGRAMS</a>
@@ -131,9 +127,7 @@ if (sectionNav) {
                             <a href="../index.php" class="nav-link">HOME</a>
                         </li>
                     
-                        <li class="nav-item">
-                            <a href="../index.php#demo" class="nav-link">INSTITUTIONAL IDENTITY</a>
-                        </li>
+                        
     
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ABOUT US</a>
@@ -151,7 +145,7 @@ if (sectionNav) {
                                     <a href="../about/history.php" class="dropdown-item">History Logo</a>
                                 </li>
                                 <li>
-                                    <a href="../about/history.php" class="dropdown-item">School History</a>
+                                    <a href="../about/school-history.php" class="dropdown-item">School History</a>
                                 </li>
                             </ul>
                         </li>
@@ -191,9 +185,7 @@ if (sectionNav) {
                             </ul>
                         </li>
     
-                        <li class="nav-item">
-                            <a href="index.php#carouselExample" class="nav-link">GALLERY</a>
-                        </li>
+                        
     
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">PROGRAMS</a>
