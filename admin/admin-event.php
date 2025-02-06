@@ -149,7 +149,7 @@ $conn->close();
     <div class="admin-post d-flex">
         
     <div id="header" class="d-flex">
-                        <div class="sidebar shadow-sm p-5" style="min-height: 100vh; background-color: #2a2a16;">
+    <div class="sidebar shadow-sm p-5" style="min-height: 100vh; background-color: #2a2a16;">
                             <div class="sidebar-brand d-flex justify-content-start align-items-center">
                                 <img src="../asset/img/kcst1.png" alt="" style="height: 50px;">
                                 <h1 class="text-light">KCST</h1>
@@ -160,22 +160,27 @@ $conn->close();
                             <div class="sidebar-nav mt-5">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a href="admin-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <a href="../admin/index.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                            <img src="../asset/img/home.png" style="width: 30px" class="img-fluid" alt="">
+                                            Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../admin/admin-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
                                             <img src="../asset/img/announce.png" style="width: 30px" class="img-fluid" alt="">
                                             Post Announcement</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="admin-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <a href="../admin/admin-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
                                             <img src="../asset/img/event.png" style="width: 30px" class="img-fluid" alt="">
                                             Post Event</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="delete-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <a href="../admin/delete-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
                                         <img src="../asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
                                         Delete Announcement</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="delete-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <a href="../admin/delete-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
                                         <img src="../asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
                                         Delete Event</a>
                                     </li>
@@ -190,35 +195,50 @@ $conn->close();
         </div>
 
         <!--offcanvas for navbar-->
-        <div class="offcanvas offcanvas-end" id="responsiveSidebar">
+        <div class="offcanvas offcanvas-end bg-dark" id="responsiveSidebar">
             <div class="offcanvas-header">
-                <h2>Menu</h2>
+                <h2 class="text-light">Admin Panel</h2>
                 <button class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
                 <div class="sidebar">
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="admin-announcement.php" class="nav-link">Post Announcement</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin-event.php" class="nav-link">Post Event</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="delete-announcement.php" class="nav-link">Delete Announcement</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="delete-event.php" class="nav-link">Delete Event</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">Logout</a>
-                        </li>
+                    <li class="nav-item">
+                                        <a href="../admin/index.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                            <img src="../asset/img/home.png" style="width: 30px" class="img-fluid" alt="">
+                                            Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../admin/admin-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                            <img src="../asset/img/announce.png" style="width: 30px" class="img-fluid" alt="">
+                                            Post Announcement</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../admin/admin-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                            <img src="../asset/img/event.png" style="width: 30px" class="img-fluid" alt="">
+                                            Post Event</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../admin/delete-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <img src="../asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
+                                        Delete Announcement</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../admin/delete-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <img src="../asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
+                                        Delete Event</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href=""  class="nav-link text-light d-flex align-items-center" style="gap: 5px">
+                                        <img src="../asset/img/logout.png" style="width: 30px" class="img-fluid" alt="">    
+                                        Logout</a>
+                                    </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="main border flex-grow-1 p-5" style="background: url(../asset/admin-bg.jpg) no-repeat center / cover;">
+        <div class="main border flex-grow-1 p-5" style="background: url(../asset/admin-bg.jpg) no-repeat center / cover; min-height: 100vh;">
             <div class="main-header d-flex justify-content-between align-items-center">
                 <h2 style="color: #808131">Post Event</h2>
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#responsiveSidebar">

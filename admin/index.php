@@ -61,6 +61,14 @@ $result = $conn->query($sql);
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+.display-1 {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 5rem;
+    color: #808131;
+}
+
 .navbar-toggler {
     background-color: #37371a; /* Bootstrap's dark color */
 }
@@ -178,32 +186,15 @@ $result = $conn->query($sql);
         </div>
 
         <div class="main border flex-grow-1 p-5" style="background: url(../asset/admin-bg.jpg) no-repeat center / cover; min-height: 100vh;">
-            <div class="main-header d-flex justify-content-between align-items-center">
-                <h2 style="color: #808131">Current Announcement</h2>
+            <div class="main-header d-flex justify-content-end align-items-center">
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#responsiveSidebar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
             <div class="main-body mt-4">
-            <div class="container  bg-white p-4 shadow d-flex justify-content-start align-items-center mt-4" style="gap: 1rem; flex-wrap: wrap;">
-    
-                <?php if ($result->num_rows > 0): ?>
-                    <?php while ($row = $result->fetch_assoc()): ?>
-                        <div class="announcement shadow-sm p-5">
-                            <h3><?= htmlspecialchars($row['title']) ?></h3>
-                            <p><?= nl2br(htmlspecialchars($row['message'])) ?></p>
-                            <small>Posted on: <?= $row['created_at'] ?></small>
-                            <br>
-                            <div class="d-flex justify-content-end">
-                                <a href="?delete_id=<?= $row['delete_id'] ?>" class="btn btn-danger mt-3">Delete</a>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <p>No announcements yet.</p>
-                <?php endif; ?>
-            </div>
-
+                <div class="display-1 d-flex justify-content-center align-items-center" style="height: 80vh">
+                    WELCOME ADMIN
+                </div>
             </div>
         </div>
     </div>
