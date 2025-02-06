@@ -56,7 +56,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="../stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -90,37 +90,37 @@ $result = $conn->query($sql);
     <div id="header" class="d-flex">
                         <div class="sidebar shadow-sm p-5" style="min-height: 100vh; background-color: #2a2a16;">
                             <div class="sidebar-brand d-flex justify-content-start align-items-center">
-                                <img src="./asset/img/kcst1.png" alt="" style="height: 50px;">
+                                <img src="../asset/img/kcst1.png" alt="" style="height: 50px;">
                                 <h1 class="text-light">KCST</h1>
                             </div>
                             <div class="profile mt-3 text-light flex-column d-flex justify-content-start align-items-center" style="gap: 5px">
-                                <img src="./asset/img/profile.png" class="img-fluid" style="width: 150px" alt=""> Welcome, Admin
+                                <img src="../asset/img/profile.png" class="img-fluid" style="width: 150px" alt=""> Welcome, Admin
                             </div>
                             <div class="sidebar-nav mt-5">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="admin-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
-                                            <img src="./asset/img/announce.png" style="width: 30px" class="img-fluid" alt="">
+                                            <img src="../asset/img/announce.png" style="width: 30px" class="img-fluid" alt="">
                                             Post Announcement</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="admin-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
-                                            <img src="./asset/img/event.png" style="width: 30px" class="img-fluid" alt="">
+                                            <img src="../asset/img/event.png" style="width: 30px" class="img-fluid" alt="">
                                             Post Event</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="delete-announcement.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
-                                        <img src="./asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
+                                        <img src="../asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
                                         Delete Announcement</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="delete-event.php" class="nav-link text-light d-flex align-items-center" style="gap: 5px">
-                                        <img src="./asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
+                                        <img src="../asset/img/delete.png" style="width: 30px" class="img-fluid" alt="">    
                                         Delete Event</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href=""  class="nav-link text-light d-flex align-items-center" style="gap: 5px">
-                                        <img src="./asset/img/logout.png" style="width: 30px" class="img-fluid" alt="">    
+                                        <img src="../asset/img/logout.png" style="width: 30px" class="img-fluid" alt="">    
                                         Logout</a>
                                     </li>
                                 </ul>
@@ -157,7 +157,7 @@ $result = $conn->query($sql);
             </div>
         </div>
 
-        <div class="main border flex-grow-1 p-5" style="background: url(./asset/admin-bg.jpg) no-repeat center / cover;">
+        <div class="main border flex-grow-1 p-5" style="background: url(../asset/admin-bg.jpg) no-repeat center / cover;">
             <div class="main-header d-flex justify-content-between align-items-center">
                 <h2 style="color: #808131">Current Announcement</h2>
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#responsiveSidebar">

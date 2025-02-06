@@ -44,11 +44,11 @@ if (sectionNav) {
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="" class="dropdown-item">School Announcement</a>
+                               <li>
+                                    <a href="../student-services/user_a.php" class="dropdown-item">School Announcement</a>
                                 </li>
                                 <li>
-                                    <a href="" class="dropdown-item">School Events</a>
+                                    <a href="../student-services/user_ev.php" class="dropdown-item">School Events</a>
                                 </li>
                         
                                 <li>
@@ -154,10 +154,10 @@ if (sectionNav) {
                             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">STUDENT SERVICES</a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="" class="dropdown-item">School Announcement</a>
+                                    <a href="../student-services/user_a.php" class="dropdown-item">School Announcement</a>
                                 </li>
                                 <li>
-                                    <a href="" class="dropdown-item">School Events</a>
+                                    <a href="../student-services/user_ev.php" class="dropdown-item">School Events</a>
                                 </li>
                         
                                 <li>
