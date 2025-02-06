@@ -134,6 +134,12 @@ $result = $conn->query($sql);
             opacity: 1;
             transform: translateY(0);
         }
+
+        .event-image {
+            width: 200px;
+            height: 200px;
+        }
+        
     </style>
 </head>
 <body>
@@ -146,15 +152,18 @@ $result = $conn->query($sql);
 
         <div class="container-fluid vh-100 d-flex justify-content-center align-items-center" id="objective">
             
-            <div class="events bg-light container p-3 rounded-3" style="max-height: 60vh; overflow-y: auto;">
+            <div class="events bg-light p-3 rounded-3" style="max-height: 60vh; overflow-y: auto; min-width: 50%">
             <h2 class="text-center display-2 fw-bold" style="color: #7E7F31; font-family: Rubik Mono One;">EVENTS</h2>
 
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo "<div class='event card border p-3 rounded-3 mt-3'>";
+                        echo "<div class='event card border d-flex justify-content-center align-items-center p-3 rounded-3 mt-3'>";
                         if (!empty($row['image'])) {
-                            echo "<img src='uploads/" . htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') . "' alt='Event Image'>";
+                            echo "<img src='../../admin/uploads/" . htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') . "' 
+                                    class='img-fluid event-image rounded-3' 
+                                    id='event-image-" . $row['id'] . "' 
+                                    alt='Event Image'>";
                         }
                         echo "<h2 style='font-family: Alfa Slab One;'>" . htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8') . "</h2>";
                         echo "<p>" . nl2br(htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8')) . "</p>";
